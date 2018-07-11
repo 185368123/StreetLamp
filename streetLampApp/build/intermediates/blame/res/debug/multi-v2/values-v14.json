@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android Studio Workspace\\StreetLampApp\\streetLampApp\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
+            "outputFile": "D:\\Android Studio Workspace\\StreetLamp\\streetLampApp\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "D:\\Android Studio Workspace\\StreetLampApp\\streetLampApp\\src\\main\\res\\values-v14\\styles.xml",
+                    "source": "D:\\Android Studio Workspace\\StreetLamp\\streetLampApp\\src\\main\\res\\values-v14\\styles.xml",
                     "from": {
                         "startLines": "7",
                         "startColumns": "4",

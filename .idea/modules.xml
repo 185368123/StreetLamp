@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/StreetLampApp.iml" filepath="$PROJECT_DIR$/StreetLampApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StreetLamp.iml" filepath="$PROJECT_DIR$/StreetLamp.iml" />
       <module fileurl="file://$PROJECT_DIR$/pickViewLibrary/pickViewLibrary.iml" filepath="$PROJECT_DIR$/pickViewLibrary/pickViewLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/slidingMenuLibrary/slidingMenuLibrary.iml" filepath="$PROJECT_DIR$/slidingMenuLibrary/slidingMenuLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/streetLampApp/streetLampApp.iml" filepath="$PROJECT_DIR$/streetLampApp/streetLampApp.iml" />
