@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ListView
+        android:divider="@null"
+        android:id="@+id/lv_selected_lamp_control_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dip" >
+    </ListView>
+    
+   <Button 
+        android:id="@+id/btn_selected_lamp_control_view_report"
+        android:background="@color/blue"
+        android:padding="15dip"
+        style="@style/NormalWhiteTextSizeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_report"
+        />
+
+</LinearLayout>

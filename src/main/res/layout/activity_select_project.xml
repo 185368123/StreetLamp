@@ -1,0 +1,32 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        style="@style/SearchEditTextStyle"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="7dip"
+        android:hint="@string/please_enter_the_keyword_search"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" >
+
+        <ListView
+            android:id="@+id/lv_total_project_list_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ListView>
+
+        <com.shuorigf.streetlampapp.ui.SideBar
+            android:layout_width="10dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right" >
+        </com.shuorigf.streetlampapp.ui.SideBar>
+    </LinearLayout>
+
+</LinearLayout>

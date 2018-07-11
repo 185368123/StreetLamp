@@ -1,0 +1,125 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/whiteNavigationBarStyle" >
+
+        <ImageButton
+            android:id="@+id/imgbtn_total_lamp_control_list_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:text="@string/select_project"
+            android:singleLine="true"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="150dip"
+            android:id="@+id/tv_total_lamp_control_list_title"
+            style="@style/NormalTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="10dip"
+            android:drawableRight="@drawable/ic_open_all" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_total_lamp_control_list_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/ic_edit" />
+
+        <ImageButton
+            android:id="@+id/imgbtn_total_lamp_control_list_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:layout_toLeftOf="@id/imgbtn_total_lamp_control_list_edit"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/ic_details" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/whiteNavigationBarStyle" >
+
+        <RadioGroup
+            android:id="@+id/rgrp_total_lamp_control_list_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbtn_total_lamp_control_list_all"
+                style="@style/TabLRRadioButtonStyle"
+                android:background="@drawable/txt_left_tab_selector"
+                android:checked="true"
+                android:text="@string/all" />
+
+            <RadioButton
+                android:id="@+id/rbtn_total_lamp_control_list_fault"
+                style="@style/TabLRRadioButtonStyle"
+                android:background="@drawable/txt_right_tab_selector"
+                android:text="@string/fault" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edt_total_lamp_control_list_search"
+            style="@style/SearchEditTextStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="20dip"
+            android:layout_toLeftOf="@id/rgrp_total_lamp_control_list_tab"
+            android:hint="@string/search" />
+    </RelativeLayout>
+
+    
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ViewFlipper
+            android:id="@+id/vf_total_lamp_control_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ViewFlipper>
+
+        <ListView
+            android:id="@+id/lv_total_lamp_control_list_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llyt_total_lamp_control_list_search_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/NormalBlackTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="@string/nothing_found" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/ic_change_sel" android:state_checked="true"/> <!-- checked -->
+    <item android:drawable="@drawable/ic_change_nor" android:state_checked="false"/> <!-- default -->
+    <item android:drawable="@drawable/ic_change_nor"/>
+
+</selector>

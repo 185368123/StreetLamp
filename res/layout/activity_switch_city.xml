@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/whiteNavigationBarStyle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/edit_switch_city_search"
+            style="@style/SearchEditTextStyle"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:hint="@string/please_enter_a_city_name_or_first_letter_search"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <com.shuorigf.streetlampapp.ui.SwitchCitySideBar
+            android:layout_marginTop="30dip"
+            android:layout_marginBottom="50dip"
+            android:id="@+id/sidebar_switch_city"
+            android:layout_width="@dimen/side_bar_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true" />
+
+        <ListView
+            android:id="@+id/lv_switch_city_all_city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/sidebar_switch_city"
+            android:divider="@null" />
+
+        <ListView
+            android:background="@color/white"
+            android:id="@+id/lv_switch_city_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:background="@color/white"
+            android:id="@+id/llyt_switch_city_search_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/NormalBlackTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="@string/nothing_found" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

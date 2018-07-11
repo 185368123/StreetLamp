@@ -1,0 +1,43 @@
+<com.shuorigf.streetlampapp.ui.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <CheckBox
+        android:id="@+id/chk_edit"
+        style="@style/EditCheckBoxStyle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:clickable="false"
+        android:focusable="false"/>
+    
+     <TextView
+        android:id="@+id/tv_lamp_control_number"
+        style="@style/NormalGrayTextSizeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip" />
+
+
+    <TextView
+        android:id="@+id/tv_network_name"
+        style="@style/NormalBlackTextSizeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/navigation_bar_width"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"
+        android:layout_toLeftOf="@id/tv_lamp_control_number"
+        android:layout_toRightOf="@id/chk_edit"
+        android:gravity="center_vertical" />
+
+
+    <View
+        style="@style/backgroundColorLineHorizontall"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip" />
+
+</com.shuorigf.streetlampapp.ui.CheckableRelativeLayout>

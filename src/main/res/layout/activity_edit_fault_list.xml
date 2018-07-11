@@ -1,0 +1,27 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/whiteNavigationBarStyle"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/chk_edit_fault_list_select_all"
+            style="@style/EditCheckBoxStyle"
+            android:layout_marginLeft="10dip"
+            android:drawablePadding="10dip"
+            android:text="@string/select_all" />
+    </LinearLayout>
+
+    <com.shuorigf.streetlampapp.xlistview.XListView
+        android:choiceMode="multipleChoice"
+        android:id="@+id/lv_edit_fault_list_fault_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/bg_app"
+        android:dividerHeight="1dip" />
+
+</LinearLayout>

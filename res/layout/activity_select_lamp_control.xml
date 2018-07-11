@@ -1,0 +1,81 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    <RelativeLayout style="@style/whiteNavigationBarStyle" >
+
+        <RadioGroup
+            android:id="@+id/rgrp_select_lamp_control_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbtn_select_lamp_control_all"
+                style="@style/TabLRRadioButtonStyle"
+                android:background="@drawable/txt_left_tab_selector"
+                android:checked="true"
+                android:text="@string/all" />
+
+            <RadioButton
+                android:id="@+id/rbtn_select_lamp_control_fault"
+                style="@style/TabLRRadioButtonStyle"
+                android:background="@drawable/txt_right_tab_selector"
+                android:text="@string/fault" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/edt_select_lamp_control_search"
+            style="@style/SearchEditTextStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="20dip"
+            android:layout_toLeftOf="@id/rgrp_select_lamp_control_tab"
+            android:hint="@string/search" />
+    </RelativeLayout>
+
+ <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ViewFlipper
+            android:id="@+id/vf_select_lamp_control"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+        </ViewFlipper>
+
+        <ListView
+            android:choiceMode="multipleChoice"
+            android:id="@+id/lv_select_lamp_control_search_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/llyt_select_lamp_control_search_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                style="@style/NormalBlackTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="100dp"
+                android:text="@string/nothing_found" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

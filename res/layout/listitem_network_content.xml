@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white" >
+
+    <ImageView
+        android:id="@+id/iv_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip" />
+
+    <TextView
+        android:id="@+id/tv_network_name"
+        style="@style/NormalBlackTextSizeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/navigation_bar_width"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:layout_toRightOf="@id/iv_sign"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/tv_lamp_control_number"
+        style="@style/NormalGrayTextSizeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip" />
+
+    <View
+        style="@style/backgroundColorLineHorizontall"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dip" />
+
+</RelativeLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+<LinearLayout 
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/navigation_bar_width"
+    android:gravity="center_vertical"
+    android:orientation="horizontal" >
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_lamp_control_report"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+    
+    <ImageButton
+            android:id="@+id/imgbtn_lamp_control_report_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/ic_filter" />
+    
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/rgrp_lamp_control_report_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_rgrp_tab_date_rounded_rectangle"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rbtn_lamp_control_report_year"
+                style="@style/TabDateRadioButtonStyle"
+                android:text="@string/year" />
+
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/rbtn_lamp_control_report_month"
+                style="@style/TabDateRadioButtonStyle"
+                android:text="@string/month" />
+
+            <RadioButton
+                android:id="@+id/rbtn_lamp_control_report_all"
+                style="@style/TabDateRadioButtonStyle"
+                android:text="@string/all" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tv_lamp_control_report_select_date"
+            style="@style/SmallBlackTextSizeStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dip"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button_rounded_rectangle_blue_outside"
+            android:drawableRight="@drawable/ic_open_select_sel"
+            android:padding="5dip"/>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_lamp_control_report"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator_lamp_control_report"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="10dip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:strokeWidth="0dp"
+        app:pageColor="@color/text_gray"
+        app:fillColor="@color/blue" />
+
+    <!--
+        app:radius="10dp"
+        app:fillColor="#FF888888"
+        app:strokeColor="#FF000000"
+        app:strokeWidth="2dp"
+    -->
+    
+
+</LinearLayout>

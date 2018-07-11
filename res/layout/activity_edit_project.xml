@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/project_name" />
+
+        <EditText
+            android:id="@+id/edt_edit_project_project_name_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/enter_project_name" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/project_number" />
+
+        <EditText
+            android:id="@+id/edt_edit_project_project_number_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/enter_project_number" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/customer_name" />
+
+        <EditText
+            android:id="@+id/edt_edit_project_customer_name_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/enter_customer_name" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/company_name" />
+
+        <EditText
+            android:id="@+id/edt_edit_project_company_name_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/enter_company_name" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/province_in" />
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="2.5"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:focusable="false"
+                android:id="@+id/edt_edit_project_select_provinces_value"
+                style="@style/rightEditTextStyle"
+                android:layout_marginLeft="0dip"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_open_select"
+                android:hint="@string/please_select_provinces" />
+
+            <EditText
+                android:visibility="invisible"
+                android:focusable="false"
+                android:id="@+id/edt_edit_project_select_the_city_value"
+                style="@style/rightEditTextStyle"
+                android:layout_marginRight="0dip"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_open_select"
+                android:hint="@string/please_select_the_city" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/detailed_address" />
+
+        <EditText
+            android:id="@+id/edt_edit_project_detailed_address_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/enter_detailed_address" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:layout_marginBottom="40dip"
+            android:id="@+id/btn_edit_project_delete_this_project"
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:background="@drawable/bg_button_rounded_rectangle_red"
+            android:padding="15dip"
+            android:text="@string/delete_this_project" />
+
+        <Button
+            android:id="@+id/btn_edit_project_save"
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_edit_project_delete_this_project"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:background="@drawable/bg_button_rounded_rectangle_blue"
+            android:padding="15dip"
+            android:text="@string/save" />
+    </RelativeLayout>
+
+</LinearLayout>

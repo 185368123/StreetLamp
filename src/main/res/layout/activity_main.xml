@@ -1,0 +1,78 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <com.shuorigf.streetlampapp.ui.NoScrollViewPager
+            android:id="@+id/vp_main_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <RadioGroup
+                android:id="@+id/rgrp_main_tab_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tab_bar"
+                android:orientation="horizontal"
+                android:paddingBottom="5dip"
+                android:paddingLeft="7dip"
+                android:paddingRight="7dip"
+                android:paddingTop="4dip" >
+
+                <RadioButton
+                    android:id="@+id/rbtn_main_homepage"
+                    style="@style/TabBarRadioButtonStyle"
+                    android:checked="true"
+                    android:drawableTop="@drawable/rbtn_homepage_selector"
+                    android:text="@string/homepage" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_main_device"
+                    style="@style/TabBarRadioButtonStyle"
+                    android:drawableTop="@drawable/rbtn_device_selector"
+                    android:text="@string/device" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_main_report"
+                    style="@style/TabBarRadioButtonStyle"
+                    android:drawableTop="@drawable/rbtn_report_selector"
+                    android:text="@string/report" />
+
+                <RadioButton
+                    android:id="@+id/rbtn_main_fault"
+                    style="@style/TabBarRadioButtonStyle"
+                    android:drawableTop="@drawable/rbtn_fault_selector"
+                    android:text="@string/fault"
+                    android:textColor="@color/txt_tab_bar_selector" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_main_fault_count"
+                style="@style/SmallWhiteTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dip"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/bg_half_rounded_rectangle_red"
+                android:paddingLeft="2dip"
+                android:paddingRight="2dip"
+                android:singleLine="true"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/fragment_left_menu" />
+
+</android.support.v4.widget.DrawerLayout>

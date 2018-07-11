@@ -1,0 +1,172 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/belongs_to_the_project" />
+
+        <EditText
+             android:focusable="false"
+            android:hint="@string/please_select_project"
+            android:id="@+id/edt_add_lamp_control_belongs_to_the_project_value"
+            style="@style/rightEditTextStyle"
+            android:drawableRight="@drawable/ic_open_select"/>
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/belongs_to_the_network" />
+
+        <EditText
+            android:focusable="false"
+            android:hint="@string/please_select_network"
+            android:id="@+id/edt_add_lamp_control_belongs_to_the_network_value"
+            style="@style/rightEditTextStyle"
+            android:drawableRight="@drawable/ic_open_select" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/street_lamp_number" />
+
+        <EditText
+            android:id="@+id/edt_add_lamp_control_street_lamp_number_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/please_enter_street_lamp_number" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/section" />
+
+        <EditText
+            android:id="@+id/edt_add_lamp_control_section_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/please_enter_section" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/wireless_module_id" />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_weight="2.5" >
+
+            <ImageButton
+                android:id="@+id/imgbtn_add_lamp_control_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:padding="10dip"
+                android:src="@drawable/ic_scan" />
+
+            <EditText
+                android:id="@+id/edt_add_lamp_control_wireless_module_id_value"
+                style="@style/rightEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="0dip"
+                android:layout_toLeftOf="@id/imgbtn_add_lamp_control_scan" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/llyt_add_lamp_control_longitude"
+            style="@style/LeftRightLinearLayoutStyle" >
+
+            <TextView
+                style="@style/LeftTextViewStyle"
+                android:text="@string/longitude" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/edt_add_lamp_control_longitude_value"
+                style="@style/rightEditTextStyle"
+                android:paddingRight="128dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LeftRightLinearLayoutStyle"
+            android:layout_below="@id/llyt_add_lamp_control_longitude" >
+
+            <TextView
+                style="@style/LeftTextViewStyle"
+                android:text="@string/latitude" />
+
+            <EditText
+                android:inputType="numberDecimal"
+                android:id="@+id/edt_add_lamp_control_latitude_value"
+                style="@style/rightEditTextStyle"
+                android:paddingRight="128dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bg_get_position"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_add_lamp_control_get"
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_get_button"
+                android:gravity="center"
+                android:text="@string/get" />
+
+            <TextView
+                android:id="@+id/tv_add_lamp_control_acquisition_map"
+                style="@style/NormalBlueTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dip"
+                android:background="@drawable/bg_acquisition_map_button"
+                android:drawableLeft="@drawable/ic_site_selection"
+                android:gravity="center"
+                android:paddingLeft="5dip"
+                android:text="@string/map_acquisition" />
+        </LinearLayout>
+    </RelativeLayout>
+    
+    
+ <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/btn_add_lamp_control_add"
+        style="@style/NormalWhiteTextSizeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/blue"
+        android:padding="15dip"
+        android:text="@string/add" />
+</RelativeLayout>
+</LinearLayout>

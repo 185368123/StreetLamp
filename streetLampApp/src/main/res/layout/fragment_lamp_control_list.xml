@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    
+     <com.shuorigf.streetlampapp.xlistview.XListView
+            android:divider="@color/bg_app"
+            android:id="@+id/lv_lamp_control_list_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+     </com.shuorigf.streetlampapp.xlistview.XListView>
+    
+</LinearLayout>

@@ -1,0 +1,889 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/whiteNavigationBarStyle" >
+        
+        <ImageButton
+            android:layout_centerVertical="true"
+            android:id="@+id/imgbtn_lamp_control_details_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/ic_back" />
+
+        <LinearLayout
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="50dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:singleLine="true"
+                android:id="@+id/tv_lamp_control_details_name"
+                style="@style/MiddleBlackTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/default_text" />
+
+            <ImageView
+                android:id="@+id/iv_lamp_control_details_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/imgbtn_lamp_control_details_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/ic_edit" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rlyt_lamp_control_details_update_history"
+                android:layout_width="match_parent"
+                android:layout_height="44dip"
+                android:background="@color/black" >
+
+                <TextView
+                    android:id="@+id/tv_lamp_control_details_latest_update_time"
+                    style="@style/NormalWhiteTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dip"
+                    android:text="@string/latest_update_time_colon" />
+
+                <TextView
+                    android:id="@+id/tv_lamp_control_details_latest_update_time_value"
+                    style="@style/NormalWhiteTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dip"
+                    android:layout_toRightOf="@id/tv_lamp_control_details_latest_update_time"
+                    android:text="@string/default_text" />
+
+                <ImageButton
+                    android:id="@+id/imgbtn_lamp_control_details_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dip"
+                    android:background="@null"
+                    android:padding="10dip"
+                    android:src="@drawable/ic_refresh" />
+            </RelativeLayout>
+
+            <include layout="@layout/include_control" />
+
+            <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+                <TextView
+                    style="@style/LeftTextViewStyle2"
+                    android:drawableLeft="@drawable/ic_device_id"
+                    android:text="@string/device_id" />
+
+                <TextView
+                    android:id="@+id/tv_lamp_control_details_device_id_value"
+                    style="@style/rightTextViewStyle2"
+                    android:text="@string/default_text" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+                <TextView
+                    style="@style/LeftTextViewStyle2"
+                    android:drawableLeft="@drawable/ic_network_id"
+                    android:text="@string/network_id" />
+
+                <TextView
+                    android:id="@+id/tv_lamp_control_details_network_id_value"
+                    style="@style/rightTextViewStyle2"
+                    android:text="@string/default_text" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+                <TextView
+                    style="@style/LeftTextViewStyle2"
+                    android:drawableLeft="@drawable/ic_wireless_module_address"
+                    android:text="@string/wireless_module_address" />
+
+                <TextView
+                    android:id="@+id/tv_lamp_control_details_wireless_module_address_value"
+                    style="@style/rightTextViewStyle2"
+                    android:text="@string/default_text" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+                <TextView
+                    style="@style/LeftTextViewStyle2"
+                    android:drawableLeft="@drawable/ic_section"
+                    android:text="@string/section" />
+
+                <TextView
+                    android:id="@+id/tv_lamp_control_details_section_value"
+                    style="@style/rightTextViewStyle2"
+                    android:text="@string/default_text" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+                <TextView
+                    style="@style/LeftTextViewStyle2"
+                    android:drawableLeft="@drawable/ic_address"
+                    android:text="@string/address" />
+
+                <TextView
+                    android:id="@+id/tv_lamp_control_details_address_value"
+                    style="@style/rightTextViewStyle2"
+                    android:text="@string/default_text" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+                <TextView
+                    style="@style/LeftTextViewStyle2"
+                    android:drawableLeft="@drawable/ic_power"
+                    android:text="@string/solar_panel_power" />
+
+                <TextView
+                    android:id="@+id/tv_lamp_control_details_solar_panel_power_value"
+                    style="@style/rightTextViewStyle2"
+                    android:text="@string/default_text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_lamp_control_details_controller_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@drawable/bg_shadow"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/NormalGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dip"
+                    android:drawableLeft="@drawable/ic_controller"
+                    android:drawablePadding="9dip"
+                    android:text="@string/controller_information" />
+
+                <View
+                    style="@style/backgroundColorLineHorizontall"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_controller_temperature_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_temperature"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/controlled_temperature" />
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_rated_voltage_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_voltage"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/rated_voltage" />
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_rated_current_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_current"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/rated_current" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_lamp_control_details_street_lamp_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shadow"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dip" >
+
+                    <TextView
+                        style="@style/NormalGrayTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_street_lamp"
+                        android:drawablePadding="9dip"
+                        android:text="@string/street_lamp_information" />
+
+                    <TextView
+                        android:id="@+id/tv_lamp_control_details_street_lamp_state_value"
+                        style="@style/NormalBlackTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true" />
+
+                    <TextView
+                        style="@style/NormalBlackTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dip"
+                        android:layout_toLeftOf="@id/tv_lamp_control_details_street_lamp_state_value"
+                        android:text="@string/state_colon" />
+                </RelativeLayout>
+
+                <View
+                    style="@style/backgroundColorLineHorizontall"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_street_lamp_brightness_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_brightness"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/street_lamp_brightness" />
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_street_lamp_power_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_power"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/street_lamp_power" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.shuorigf.streetlampapp.ui.RectTime
+                    android:id="@+id/recttime_lamp_control_details_street_lamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_lamp_control_details_battery_board_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shadow"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/NormalGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dip"
+                    android:drawableLeft="@drawable/ic_battery_board"
+                    android:drawablePadding="9dip"
+                    android:text="@string/battery_board_information" />
+
+                <View
+                    style="@style/backgroundColorLineHorizontall"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_battery_board_voltage_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_voltage"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/voltage" />
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_battery_board_power_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_power"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/power" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <com.shuorigf.streetlampapp.ui.RectTime
+                    android:id="@+id/recttime_lamp_control_details_battery_board"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_lamp_control_details_storage_battery_board_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shadow"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/NormalGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dip"
+                    android:drawableLeft="@drawable/ic_storage_battery_board"
+                    android:drawablePadding="9dip"
+                    android:text="@string/storage_battery_board_information" />
+
+                <View
+                    style="@style/backgroundColorLineHorizontall"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_storage_battery_board_voltage_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_voltage"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/voltage" />
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_storage_battery_board_day_minimum_voltage_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_minimum_voltage"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/day_minimum_voltage" />
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_storage_battery_board_day_peak_voltage_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_peak_voltage"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/day_peak_voltage" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/backgroundColorLineHorizontall"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_electricity_big" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dip"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:id="@+id/tv_lamp_control_details_storage_battery_board_electricity_value"
+                                style="@style/hugeBlackTextSizeStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/default_text" />
+
+                            <TextView
+                                style="@style/SmallGrayTextSizeStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dip"
+                                android:text="@string/electricity" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_storage_battery_board_charging_status_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_charging_status"
+                            android:drawablePadding="12dip"
+                            android:singleLine="true"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:text="@string/charging_status" />
+                        
+                        <TextView
+                            android:layout_marginTop="15dip"
+                            android:id="@+id/tv_lamp_control_details_storage_battery_board_charging_stage_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dip"
+                            android:text="@string/charging_stage" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/backgroundColorLineHorizontall"
+                    android:layout_marginLeft="15dip"
+                    android:layout_marginRight="15dip" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_storage_battery_board_temperature_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_temperature"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/temperature" />
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_storage_battery_board_total_over_time_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_over_time"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/total_over_time" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llyt_lamp_control_details_daily_electricity_information"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_shadow"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_running_days_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_time"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/running_days" />
+                    </LinearLayout>
+
+                    <View style="@style/backgroundColorLineVertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_over_time_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableLeft="@drawable/ic_over_time"
+                            android:drawablePadding="12dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/total_charge_time" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dip"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_electricity_stage_4" />
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_cumulative_generating_capacity_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/cumulative_generating_capacity" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dip"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_electricity_stage_2" />
+
+                        <TextView
+                            android:id="@+id/tv_lamp_control_details_cumulative_electricity_consumption_value"
+                            style="@style/hugeBlackTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/default_text" />
+
+                        <TextView
+                            style="@style/SmallGrayTextSizeStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dip"
+                            android:text="@string/cumulative_electricity_consumption" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_lamp_control_details_delete_this_lamp_control"
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="60dip"
+                android:layout_marginLeft="30dip"
+                android:layout_marginRight="30dip"
+                android:layout_marginTop="30dip"
+                android:background="@drawable/bg_button_rounded_rectangle_red"
+                android:text="@string/delete_this_lamp_control" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

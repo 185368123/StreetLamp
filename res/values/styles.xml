@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowBackground">@color/bg_app</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="android:Theme.NoTitleBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">@style/ButtonBar</item>
+        <item name="metaButtonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton" />
+
+    <style name="SmallTextSizeStyle">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="SmallWhiteTextSizeStyle" parent="SmallTextSizeStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SmallBlackTextSizeStyle" parent="SmallTextSizeStyle">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="SmallGrayTextSizeStyle" parent="SmallTextSizeStyle">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+    
+    <style name="SmallBlueTextSizeStyle" parent="SmallTextSizeStyle">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="NormalTextSizeStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="NormalWhiteTextSizeStyle" parent="NormalTextSizeStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="NormalBlackTextSizeStyle" parent="NormalTextSizeStyle">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="NormalGrayTextSizeStyle" parent="NormalTextSizeStyle">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="NormalBlueTextSizeStyle" parent="NormalTextSizeStyle">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="NormalRedTextSizeStyle" parent="NormalTextSizeStyle">
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+    <style name="MiddleTextSizeStyle">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="MiddleWhiteTextSizeStyle" parent="MiddleTextSizeStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MiddleBlackTextSizeStyle" parent="MiddleTextSizeStyle">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="MiddleGrayTextSizeStyle" parent="MiddleTextSizeStyle">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+    
+     <style name="LargeTextSizeStyle">
+        <item name="android:textSize">22sp</item>
+    </style>
+    
+        <style name="LargeBlackTextSizeStyle" parent="LargeTextSizeStyle">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="hugeTextSizeStyle">
+        <item name="android:textSize">27sp</item>
+    </style>
+
+    <style name="hugeWhiteTextSizeStyle" parent="hugeTextSizeStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="hugeBlackTextSizeStyle" parent="hugeTextSizeStyle">
+        <item name="android:textColor">@color/text_black</item>
+    </style>
+
+    <style name="hugeGrayTextSizeStyle" parent="hugeTextSizeStyle">
+        <item name="android:textColor">@color/text_gray</item>
+    </style>
+
+    <style name="NavigationBarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/navigation_bar_width</item>
+    </style>
+
+    <style name="whiteNavigationBarStyle" parent="NavigationBarStyle">
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="bgAppNavigationBarStyle" parent="NavigationBarStyle">
+        <item name="android:background">@color/bg_app</item>
+    </style>
+
+    <style name="backgroundColorLineVertical">
+        <item name="android:layout_width">2dip</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/bg_app</item>
+    </style>
+
+    <style name="backgroundColorLineHorizontall">
+        <item name="android:layout_height">1dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/bg_app</item>
+    </style>
+
+    <style name="TabBarRadioButtonStyle">
+        <item name="android:button">@null</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">@color/txt_tab_bar_selector</item>
+    </style>
+    
+    <style name="TabLRRadioButtonStyle">
+        <item name="android:button">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/txt_report_tab_selector</item>
+        <item name="android:paddingBottom">5dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:paddingTop">5dip</item>
+    </style>
+    
+     <style name="TabDateRadioButtonStyle">
+         <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">50dip</item>
+        <item name="android:background">@drawable/rbtn_tab_date_selector</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/txt_tab_date_selector</item>
+        <item name="android:paddingBottom">5dip</item>
+        <item name="android:paddingTop">5dip</item>
+    </style>
+
+    <style name="LoginCheckBoxStyle" parent="NormalWhiteTextSizeStyle">
+        <item name="android:drawableLeft">@drawable/chk_login_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="DeviceCheckBoxStyle" parent="SmallTextSizeStyle">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/bg_chk_device_map_selector</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/txt_device_map_selector</item>
+    </style>
+
+    <style name="ButtonCheckBoxStyle">
+        <item name="android:button">@null</item>
+        <item name="android:background">@drawable/chk_button_selector</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="MoreCheckBoxStyle">
+         <item name="android:padding">10dip</item>
+         <item name="android:background">@null</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableLeft">@drawable/chk_more_selector</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="EditCheckBoxStyle">
+        <item name="android:drawableLeft">@drawable/chk_edit_selector</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <style name="DimmingSeekBarStyle">
+        <item name="android:progressDrawable">@drawable/sb_aiming_selector</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:thumb">@drawable/bg_seekbar_thumb</item>
+        <item name="android:maxHeight">8dip</item>
+        <item name="android:minHeight">8dip</item>
+        <item name="android:paddingLeft">30dip</item>
+        <item name="android:paddingRight">30dip</item>
+    </style>
+
+    <style name="SearchEditTextStyle" parent="SmallBlackTextSizeStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/edit_text</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:drawableRight">@drawable/ic_search_nor</item>
+        <item name="android:background">@drawable/bg_app_rounded_rectangle_inside</item>
+    </style>
+
+    <style name="LeftRightLinearLayoutStyle">
+        <item name="android:layout_height">@dimen/navigation_bar_width</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="LeftTextViewStyle2" parent="NormalGrayTextSizeStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">20dip</item>
+        <item name="android:drawablePadding">10dip</item>
+    </style>
+
+    <style name="rightTextViewStyle2" parent="NormalBlackTextSizeStyle">
+        <item name="android:gravity">right</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">20dip</item>
+    </style>
+
+    <style name="LeftTextViewStyle" parent="NormalGrayTextSizeStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginLeft">10dip</item>
+    </style>
+    <style name="rightTextViewStyle" parent="NormalBlackTextSizeStyle">
+        <item name="android:gravity">right</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">2.5</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style>
+
+    <style name="rightEditTextStyle" parent="NormalBlackTextSizeStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">2.5</item>
+         <item name="android:paddingBottom">2dip</item>
+        <item name="android:background">@drawable/background_color_line</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style>
+
+    <style name="rightEditTextStyle2" parent="NormalBlackTextSizeStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:layout_width">0dip</item>
+        <item name="android:layout_weight">1.5</item>
+        <item name="android:background">@drawable/background_color_line</item>
+        <item name="android:layout_marginLeft">10dip</item>
+        <item name="android:layout_marginRight">10dip</item>
+    </style>
+
+    <style name="WithGotoButtonStyle" parent="NormalBlackTextSizeStyle">
+        <item name="android:layout_height">@dimen/navigation_bar_width</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:drawableRight">@drawable/ic_go_to</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingRight">10dip</item>
+        <item name="android:gravity">left|center_vertical</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!-- 设置无边框 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置无标题 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!-- 设置完全透明 -->
+    </style>
+
+</resources>

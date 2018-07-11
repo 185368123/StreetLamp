@@ -1,0 +1,197 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/NormalRedTextSizeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_bar_width"
+        android:background="@color/white"
+        android:gravity="right|center_vertical"
+        android:paddingRight="10dip"
+        android:text="@string/read" />
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/street_lamp_load_mode" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_street_lamp_load_mode_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/first_working_hours" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_first_working_hours_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/first_working_power" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_first_working_power_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/second_working_hours" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_second_working_hours_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/second_working_power" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_second_working_power_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/third_working_hours" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_third_working_hours_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/third_working_power" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_third_working_power_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/morning_light_time" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_morning_light_time_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+    
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/morning_light_power" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_morning_light_power_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/light_control_voltage" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_light_control_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/light_control_delay_time" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_light_control_delay_time_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/led_load_current" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_led_load_current_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <!-- <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/last_parameter_setting_time" />
+
+        <EditText
+            android:id="@+id/edt_load_setting_last_parameter_setting_time_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout> -->
+
+    <RelativeLayout
+         style="@style/whiteNavigationBarStyle" >
+
+        <TextView
+            android:layout_centerVertical="true"
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="@string/intelligent_power_control" />
+        
+        <CheckBox
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/chk_load_setting_intelligent_power_control"
+            style="@style/ButtonCheckBoxStyle"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+    
+    <RelativeLayout
+         style="@style/whiteNavigationBarStyle" >
+
+        <TextView
+            android:layout_centerVertical="true"
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="@string/every_night_lighting_function" />
+        
+        <CheckBox
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:id="@+id/chk_load_setting_every_night_lighting_function"
+            style="@style/ButtonCheckBoxStyle"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+
+</LinearLayout>

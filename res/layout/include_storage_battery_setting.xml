@@ -1,0 +1,204 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/NormalRedTextSizeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navigation_bar_width"
+        android:background="@color/white"
+        android:gravity="right|center_vertical"
+        android:paddingRight="10dip"
+        android:text="@string/already_read" />
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/storage_battery_capacity" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_storage_battery_capacity_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/storage_battery_type" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_storage_battery_type_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/overpressure_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_overpressure_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/charging_limit_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_charging_limit_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/balance_charge_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_balance_charge_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/lifting_charge_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_lifting_charge_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/floating_charge_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_floating_charge_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/lifting_charge_recovery_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_lifting_charge_recovery_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/over_recovery_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_over_recovery_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/undervoltage_warning_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_undervoltage_warning_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/over_voltage" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_over_voltage_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/balance_charge_time" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_balance_charge_time_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+    
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/lifting_charge_time" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_lifting_charge_time_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+    
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/balance_charge_interval" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_balance_charge_interval_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+    
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/temperature_compensation_coefficient" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_temperature_compensation_coefficient_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+    
+     <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/temperature_compensation_coefficient_peak_temperature" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_temperature_compensation_coefficient_peak_temperature_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+    
+      <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/temperature_compensation_coefficient_minimum_temperature" />
+
+        <EditText
+            android:id="@+id/edt_storage_battery_setting_temperature_compensation_coefficient_minimum_temperature_value"
+            style="@style/rightEditTextStyle2" />
+    </LinearLayout>
+
+
+</LinearLayout>

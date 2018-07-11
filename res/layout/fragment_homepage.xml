@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+         style="@style/whiteNavigationBarStyle" >
+
+        <ImageButton
+            android:id="@+id/imgbtn_homepage_accout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/ic_accout" />
+
+        <TextView
+            android:singleLine="true"
+            android:layout_marginLeft="50dip"
+            android:id="@+id/tv_homepage_address"
+            style="@style/MiddleBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="12dip"
+            android:drawableRight="@drawable/ic_address"
+            android:padding="10dip"
+            android:text="@string/default_text" />
+
+      <!--   <ImageButton
+            android:id="@+id/imgbtn_homepage_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:padding="10dip"
+            android:src="@drawable/ic_add" /> -->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="5"
+        android:background="@drawable/bg_homepage_1_block" >
+
+        <LinearLayout
+            android:id="@+id/llyt_homepage_weather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dip"
+            android:background="@drawable/bg_homepage_weather"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/iv_homepage_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:src="@drawable/ic_weather" />
+
+            <TextView
+                android:id="@+id/tv_homepage_weather_temperature"
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="@string/default_text" />
+
+            <TextView
+                android:id="@+id/tv_homepage_weather_phenomenon"
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="@string/default_text" />
+
+            <TextView
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:text="@string/air_quality_colon" />
+
+            <TextView
+                android:id="@+id/tv_homepage_weather_air_quality_value"
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:text="@string/default_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/llyt_homepage_weather"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <com.shuorigf.streetlampapp.ui.RingRate
+                android:id="@+id/ringrate_homepage_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dip" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="40dip"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/NormalGrayTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_online_rate"
+                        android:drawablePadding="5dip"
+                        android:text="@string/online_rate" />
+
+                    <TextView
+                        android:id="@+id/tv_homepage_online_rate_value"
+                        style="@style/hugeBlackTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dip"
+                        android:text="--%" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/NormalGrayTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_lighting_rate"
+                        android:drawablePadding="5dip"
+                        android:text="@string/lighting_rate" />
+
+                    <TextView
+                        android:id="@+id/tv_homepage_lighting_rate_value"
+                        style="@style/hugeBlackTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dip"
+                        android:text="--%" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/NormalGrayTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/ic_failure_rate"
+                        android:drawablePadding="5dip"
+                        android:text="@string/failure_rate" />
+
+                    <TextView
+                        android:id="@+id/tv_homepage_failure_rate_value"
+                        style="@style/hugeBlackTextSizeStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dip"
+                        android:text="--%" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="3"
+        android:background="@drawable/bg_homepage_2_block"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="27dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_homepage_total_generating_capacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_total_generating_capacity" />
+
+                <TextView
+                    android:id="@+id/tv_homepage_total_generating_capacity_value"
+                    style="@style/LargeBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:layout_toRightOf="@id/iv_homepage_total_generating_capacity"
+                    android:includeFontPadding="false"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    style="@style/SmallBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_homepage_total_generating_capacity_value"
+                    android:layout_toRightOf="@id/tv_homepage_total_generating_capacity_value"
+                    android:text="kwh" />
+
+                <TextView
+                    style="@style/NormalGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_homepage_total_generating_capacity_value"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginTop="6dip"
+                    android:layout_toRightOf="@id/iv_homepage_total_generating_capacity"
+                    android:text="@string/total_generating_capacity" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_homepage_total_installed_lights"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_total_installed_lights" />
+
+                <TextView
+                    android:id="@+id/tv_homepage_total_installed_lights_value"
+                    style="@style/LargeBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:layout_toRightOf="@id/iv_homepage_total_installed_lights"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    style="@style/NormalGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_homepage_total_installed_lights_value"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginTop="6dip"
+                    android:layout_toRightOf="@id/iv_homepage_total_installed_lights"
+                    android:text="@string/total_installed_lights" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="27dip"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_homepage_total_installed_capacity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_total_installed_capacity" />
+
+                <TextView
+                    android:id="@+id/tv_homepage_total_installed_capacity_value"
+                    style="@style/LargeBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:layout_toRightOf="@id/iv_homepage_total_installed_capacity"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    style="@style/SmallBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_homepage_total_installed_capacity_value"
+                    android:layout_toRightOf="@id/tv_homepage_total_installed_capacity_value"
+                    android:text="kw" />
+
+                <TextView
+                    style="@style/NormalGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_homepage_total_installed_capacity_value"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginTop="6dip"
+                    android:layout_toRightOf="@id/iv_homepage_total_installed_capacity"
+                    android:text="@string/total_installed_capacity" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/iv_homepage_total_network_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_total_network_number" />
+
+                <TextView
+                    android:id="@+id/tv_homepage_total_network_number_value"
+                    style="@style/LargeBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dip"
+                    android:layout_toRightOf="@id/iv_homepage_total_network_number"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    style="@style/NormalGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_homepage_total_network_number_value"
+                    android:layout_marginLeft="8dip"
+                    android:layout_marginTop="6dip"
+                    android:layout_toRightOf="@id/iv_homepage_total_network_number"
+                    android:text="@string/total_network_number" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="2"
+        android:background="@drawable/bg_homepage_3_block"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_save_standard_coal" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dip" >
+
+                <TextView
+                    android:id="@+id/tv_homepage_save_standard_coal_value"
+                    style="@style/MiddleBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    style="@style/SmallBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_homepage_save_standard_coal_value"
+                    android:layout_toRightOf="@id/tv_homepage_save_standard_coal_value"
+                    android:text="@string/ton" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/SmallGrayTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:text="@string/save_standard_coal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cumulative_reduction_co2" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip" >
+
+                <TextView
+                    android:id="@+id/tv_homepage_cumulative_reduction_co2_value"
+                    style="@style/MiddleBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    style="@style/SmallBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_homepage_cumulative_reduction_co2_value"
+                    android:layout_toRightOf="@id/tv_homepage_cumulative_reduction_co2_value"
+                    android:text="kg" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/SmallGrayTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:text="@string/cumulative_reduction_co2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_cumulative_reduction_so2" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip" >
+
+                <TextView
+                    android:id="@+id/tv_homepage_cumulative_reduction_so2_value"
+                    style="@style/MiddleBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    style="@style/SmallBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/tv_homepage_cumulative_reduction_so2_value"
+                    android:layout_toRightOf="@id/tv_homepage_cumulative_reduction_so2_value"
+                    android:text="kg" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/SmallGrayTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dip"
+                android:text="@string/cumulative_reduction_so2" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

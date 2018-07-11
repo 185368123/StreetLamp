@@ -1,0 +1,187 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/belongs_to_the_project" />
+
+        <EditText
+            android:focusable="false"
+            android:hint="@string/please_select_project" 
+            android:drawableRight="@drawable/ic_open_select"
+            android:id="@+id/edt_edit_network_belongs_to_the_project_value"
+            style="@style/rightEditTextStyle" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/network_number" />
+
+        <EditText
+            android:id="@+id/edt_edit_network_network_number_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/please_enter_network_number" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/network_name" />
+
+        <EditText
+            android:id="@+id/edt_edit_network_network_name_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/please_enter_network_name" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/section" />
+
+        <EditText
+            android:id="@+id/edt_edit_network_section_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/please_enter_section" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/sim_number" />
+
+        <EditText
+            android:id="@+id/edt_edit_network_sim_number_value"
+            style="@style/rightEditTextStyle"
+            android:hint="@string/please_enter_sim_number" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+
+        <LinearLayout
+            android:id="@+id/llyt_edit_network_longitude"
+            style="@style/LeftRightLinearLayoutStyle" >
+
+            <TextView
+                style="@style/LeftTextViewStyle"
+                android:text="@string/longitude" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2.5"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/edt_edit_network_longitude_value"
+                    style="@style/rightEditTextStyle"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="128dip" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/LeftRightLinearLayoutStyle"
+            android:layout_below="@id/llyt_edit_network_longitude" >
+
+            <TextView
+                style="@style/LeftTextViewStyle"
+                android:text="@string/latitude" />
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:layout_marginRight="10dip"
+                android:layout_weight="2.5"
+                android:orientation="horizontal" >
+
+                <EditText
+                    android:inputType="numberDecimal"
+                    android:id="@+id/edt_edit_network_latitude_value"
+                    style="@style/rightEditTextStyle"
+                    android:layout_marginLeft="0dip"
+                    android:layout_marginRight="128dip" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:background="@drawable/bg_get_position"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_edit_network_get"
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_get_button"
+                android:text="@string/get" />
+
+            <TextView
+                android:gravity="center"
+                android:id="@+id/tv_edit_network_acquisition_map"
+                style="@style/NormalBlueTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dip"
+                android:background="@drawable/bg_acquisition_map_button"
+                android:drawableLeft="@drawable/ic_site_selection"
+                android:paddingLeft="5dip"
+                android:text="@string/map_acquisition" />
+        </LinearLayout>
+    </RelativeLayout>
+
+     <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:layout_marginBottom="40dip"
+            android:id="@+id/btn_edit_network_delete_this_network"
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:background="@drawable/bg_button_rounded_rectangle_red"
+            android:padding="15dip"
+            android:text="@string/delete_this_network" />
+
+        <Button
+            android:id="@+id/btn_edit_network_save"
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/btn_edit_network_delete_this_network"
+            android:layout_marginBottom="20dip"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:background="@drawable/bg_button_rounded_rectangle_blue"
+            android:padding="15dip"
+            android:text="@string/save" />
+    </RelativeLayout>
+
+</LinearLayout>

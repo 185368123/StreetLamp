@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_welcome" >
+    
+    
+    <TextView
+        android:id="@+id/tv_welcome_title_3"
+        android:drawableLeft="@drawable/ic_logo"
+        android:text="@string/app_welcome_title_3"
+        android:drawablePadding="5dp"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"
+        style="@style/NormalWhiteTextSizeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+    
+      <TextView
+          android:id="@+id/tv_welcome_title_2"
+        android:layout_above="@id/tv_welcome_title_3"
+        android:text="@string/app_welcome_title_2"
+        android:layout_marginBottom="40dp"
+        style="@style/NormalWhiteTextSizeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+
+      <TextView
+        android:layout_above="@id/tv_welcome_title_2"
+        android:text="@string/app_welcome_title_1"
+        android:layout_marginBottom="5dp"
+        style="@style/MiddleWhiteTextSizeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

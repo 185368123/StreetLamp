@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/StreetLampApp.iml" filepath="$PROJECT_DIR$/StreetLampApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pickViewLibrary/pickViewLibrary.iml" filepath="$PROJECT_DIR$/pickViewLibrary/pickViewLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/slidingMenuLibrary/slidingMenuLibrary.iml" filepath="$PROJECT_DIR$/slidingMenuLibrary/slidingMenuLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/streetLampApp/streetLampApp.iml" filepath="$PROJECT_DIR$/streetLampApp/streetLampApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewPagerIndicatorLibrary/viewPagerIndicatorLibrary.iml" filepath="$PROJECT_DIR$/viewPagerIndicatorLibrary/viewPagerIndicatorLibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zxinglibrary/zxinglibrary.iml" filepath="$PROJECT_DIR$/zxinglibrary/zxinglibrary.iml" />
+    </modules>
+  </component>
+</project>

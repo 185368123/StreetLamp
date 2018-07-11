@@ -1,0 +1,24 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent" >
+
+        
+        <TextView
+            android:layout_marginTop="114dip"
+            android:layout_gravity="center_horizontal"
+            style="@style/MiddleBlackTextSizeStyle"
+            android:text="@string/push_reminder_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        
+        <TextView
+            style="@style/MiddleBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+
+</LinearLayout>

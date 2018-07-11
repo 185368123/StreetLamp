@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/whiteNavigationBarStyle"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+        
+        <TextView
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="0dip"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:text="@string/update_time" />
+        
+        
+        <TextView
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/voltage_V" />
+        
+        <TextView
+            android:id="@+id/tv_update_history_electricity"
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/electricity_A" />
+        
+        <TextView
+            android:id="@+id/tv_update_history_temperature"
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="@string/temperature_0C" />
+        
+        
+    </LinearLayout>
+
+
+    <com.shuorigf.streetlampapp.xlistview.XListView
+        android:id="@+id/lv_update_history_content"
+        android:divider="@null"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.shuorigf.streetlampapp.xlistview.XListView>
+
+</LinearLayout>

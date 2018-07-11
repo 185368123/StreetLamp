@@ -1,0 +1,12 @@
+<resources>
+
+    <dimen name="side_bar_letter_size">10sp</dimen>
+    <dimen name="side_bar_width">20dip</dimen>
+    <dimen name="navigation_bar_width">44dip</dimen>
+    <dimen name="rect_time_left_text_size">12sp</dimen>
+    <dimen name="rect_time_right_text_size">16sp</dimen>
+    <dimen name="header_height">60dp</dimen>
+    <dimen name="footer_height">90dp</dimen>
+    <dimen name="footer_padding">10dp</dimen>
+
+</resources>

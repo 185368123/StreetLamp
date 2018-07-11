@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <TextView
+        android:id="@+id/tv_lamp_control_name"
+        style="@style/NormalBlackTextSizeStyle"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/navigation_bar_width"
+        android:paddingLeft="10dip"
+        android:paddingRight="40dip"
+        android:singleLine="true" />
+
+    <View
+        style="@style/backgroundColorLineHorizontall"
+        android:layout_below="@id/tv_lamp_control_name"
+        android:layout_marginLeft="10dip" />
+
+    <ImageView
+        android:id="@+id/iv_choose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:src="@drawable/ic_delete" />
+
+</RelativeLayout>

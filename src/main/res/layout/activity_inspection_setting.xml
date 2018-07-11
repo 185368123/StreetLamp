@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout style="@style/whiteNavigationBarStyle" >
+
+        <TextView
+            style="@style/NormalBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="@string/inspection_switch" />
+
+        <CheckBox
+            android:id="@+id/chk_inspection_setting_inspection_switch"
+            style="@style/ButtonCheckBoxStyle"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip" />
+
+        <View
+            style="@style/backgroundColorLineHorizontall"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="10dip" />
+    </RelativeLayout>
+
+    <RelativeLayout style="@style/whiteNavigationBarStyle" >
+
+        <TextView
+            style="@style/NormalBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:text="@string/inspection_interval_time" />
+
+        <TextView
+            android:id="@+id/tv_inspection_setting_inspection_interval_time"
+            android:drawableRight="@drawable/ic_go_to"
+            android:drawablePadding="20dip"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip" />
+    </RelativeLayout>
+    
+   <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/btn_inspection_setting_comfirm"
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue"
+            android:padding="15dip"
+            android:text="@string/confirm" />
+    </RelativeLayout>
+</LinearLayout>

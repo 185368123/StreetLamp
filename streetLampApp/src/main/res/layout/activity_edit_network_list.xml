@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/whiteNavigationBarStyle"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/chk_edit_network_list_select_all"
+            style="@style/EditCheckBoxStyle"
+            android:layout_marginLeft="10dip"
+            android:drawablePadding="10dip"
+            android:text="@string/select_all" />
+        
+        </LinearLayout>
+
+    <ListView
+        android:choiceMode="multipleChoice"
+        android:layout_marginTop="1dip"
+        android:divider="@null"
+        android:id="@+id/lv_edit_network_list_content"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dip" >
+    </ListView>
+    
+     <Button 
+        android:id="@+id/btn_edit_network_list_comfirm"
+        android:background="@color/blue"
+        android:padding="15dip"
+        style="@style/NormalWhiteTextSizeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    
+
+</LinearLayout>

@@ -1,0 +1,114 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/project_name" />
+
+        <TextView
+            android:id="@+id/tv_fault_details_project_name_value"
+            style="@style/rightTextViewStyle"
+            android:text="@string/default_text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/network_number" />
+
+        <TextView
+            android:id="@+id/tv_fault_details_network_number_value"
+            style="@style/rightTextViewStyle"
+            android:text="@string/default_text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/street_lamp_number" />
+
+        <TextView
+            android:id="@+id/tv_fault_details_street_lamp_number_value"
+            style="@style/rightTextViewStyle"
+            android:text="@string/default_text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/position_information" />
+
+        <TextView
+            android:id="@+id/tv_fault_details_position_information_value"
+            style="@style/rightTextViewStyle"
+            android:text="@string/default_text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/alarm_event" />
+
+        <TextView
+            android:id="@+id/tv_fault_details_alarm_event_value"
+            style="@style/rightTextViewStyle"
+            android:text="@string/default_text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/alarm_time" />
+
+        <TextView
+            android:id="@+id/tv_fault_details_alarm_time_value"
+            style="@style/rightTextViewStyle"
+            android:text="@string/default_text" />
+    </LinearLayout>
+
+    <LinearLayout style="@style/LeftRightLinearLayoutStyle" >
+
+        <TextView
+            style="@style/LeftTextViewStyle"
+            android:text="@string/wireless_module_time" />
+
+        <TextView
+            android:id="@+id/tv_fault_details_wireless_module_time_value"
+            style="@style/rightTextViewStyle"
+            android:text="@string/default_text" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_fault_details_view_lamp_control"
+        style="@style/NormalWhiteTextSizeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:background="@drawable/bg_button_rounded_rectangle_blue"
+        android:text="@string/view_lamp_control" />
+
+    <Button
+        android:id="@+id/btn_fault_details_marked_as_already_processed"
+        style="@style/NormalBlueTextSizeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+         android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:background="@drawable/bg_button_rounded_rectangle_blue_outside" />
+
+</LinearLayout>

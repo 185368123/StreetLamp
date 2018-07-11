@@ -1,0 +1,204 @@
+<com.shuorigf.streetlampapp.ui.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dip" >
+
+            <TextView
+                android:id="@+id/tv_lamp_control_name"
+                style="@style/NormalGrayTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="36dip" />
+
+            <ImageView
+                android:id="@+id/iv_lamp_control_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dip"
+                android:layout_toRightOf="@id/tv_lamp_control_name"
+                android:src="@drawable/ic_lamp_control_off_status" />
+
+            <TextView
+                android:id="@+id/tv_network_name"
+                style="@style/NormalGrayTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="21dip"
+                android:layout_toRightOf="@id/iv_lamp_control_status" />
+
+            <ImageView
+                android:id="@+id/iv_network_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dip"
+                android:layout_toRightOf="@id/tv_network_name"
+                android:src="@drawable/ic_network_on_status" />
+
+            <ImageView
+                android:id="@+id/imgbtn_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dip"
+                android:src="@drawable/ic_refresh" />
+        </RelativeLayout>
+
+        <View style="@style/backgroundColorLineHorizontall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_total_installed_capacity" />
+
+                <TextView
+                    android:id="@+id/tv_power_values"
+                    style="@style/MiddleBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dip"
+                    android:layout_toRightOf="@id/iv_power"
+                    android:text="50W" />
+
+                <TextView
+                    style="@style/SmallGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_power_values"
+                    android:layout_below="@id/tv_power_values"
+                    android:layout_marginTop="6dip"
+                    android:layout_toRightOf="@id/iv_power"
+                    android:text="@string/power" />
+            </RelativeLayout>
+
+            <View
+                style="@style/backgroundColorLineVertical"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip" />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_electricity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_electricity" />
+
+                <TextView
+                    android:id="@+id/tv_electricity_values"
+                    style="@style/MiddleBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dip"
+                    android:layout_toRightOf="@id/iv_electricity"
+                    android:text="50%" />
+
+                <TextView
+                    style="@style/SmallGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_electricity_values"
+                    android:layout_below="@id/tv_electricity_values"
+                    android:layout_marginTop="6dip"
+                    android:layout_toRightOf="@id/iv_electricity"
+                    android:text="@string/electricity" />
+            </RelativeLayout>
+
+            <View
+                style="@style/backgroundColorLineVertical"
+                android:layout_marginBottom="10dip"
+                android:layout_marginTop="10dip" />
+
+            <RelativeLayout
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_charging_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_charging_status_red" />
+
+                <TextView
+                    android:id="@+id/tv_charging_status_values"
+                    style="@style/MiddleBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dip"
+                    android:layout_toRightOf="@id/iv_charging_status"
+                    android:text="MPPT" />
+
+                <TextView
+                    style="@style/SmallGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/tv_charging_status_values"
+                    android:layout_below="@id/tv_charging_status_values"
+                    android:layout_marginTop="6dip"
+                    android:layout_toRightOf="@id/iv_charging_status"
+                    android:text="@string/charging_status" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View style="@style/backgroundColorLineHorizontall" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dip"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/SmallGrayTextSizeStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dip" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:layout_marginTop="14dip"
+        android:id="@+id/chk_edit"
+        style="@style/EditCheckBoxStyle"
+        android:layout_marginLeft="10dip"
+        android:clickable="false"
+        android:focusable="false" />
+
+</com.shuorigf.streetlampapp.ui.CheckableRelativeLayout>

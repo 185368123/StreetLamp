@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        style="@style/whiteNavigationBarStyle"
+        android:gravity="center_vertical" >
+
+        <CheckBox
+            android:id="@+id/chk_edit_lamp_control_list_select_all"
+            style="@style/EditCheckBoxStyle"
+            android:layout_marginLeft="10dip"
+            android:drawablePadding="10dip"
+            android:text="@string/select_all" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_edit_lamp_control_list_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_marginTop="10dip"
+        android:choiceMode="multipleChoice"
+        android:divider="@color/bg_app"
+        android:dividerHeight="10dip" >
+    </ListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_edit_lamp_control_list_delete"
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red"
+            android:text="@string/delete" />
+
+       <!--  <Button
+            android:id="@+id/btn_edit_lamp_control_list_control"
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/blue"
+            android:text="@string/control" /> -->
+    </LinearLayout>
+
+</LinearLayout>

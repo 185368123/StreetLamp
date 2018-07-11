@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/btn_add_device_add_project"
+        style="@style/WithGotoButtonStyle"
+        android:text="@string/add_project" />
+
+    <Button
+        android:id="@+id/btn_add_device_add_network"
+        style="@style/WithGotoButtonStyle"
+        android:text="@string/add_network" />
+
+    <Button
+        android:id="@+id/btn_add_device_add_lamp_control"
+        style="@style/WithGotoButtonStyle"
+        android:text="@string/add_lamp_control" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:layout_marginTop="10dip"
+        android:background="@color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_marginTop="10dip"
+            android:text="@string/existing_equipment" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_add_device_project_value"
+                    style="@style/hugeBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    android:layout_marginTop="13dip"
+                    style="@style/SmallGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/project" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_add_device_network_value"
+                    style="@style/hugeBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    android:layout_marginTop="13dip"
+                    style="@style/SmallGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/network" />
+            </LinearLayout>
+                <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tv_add_device_lamp_control_value"
+                    style="@style/hugeBlackTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_text" />
+
+                <TextView
+                    android:layout_marginTop="13dip"
+                    style="@style/SmallGrayTextSizeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lamp_control" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

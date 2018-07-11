@@ -1,0 +1,58 @@
+<com.shuorigf.streetlampapp.ui.CheckableRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/whiteNavigationBarStyle"
+    android:layout_width="match_parent" >
+    
+    <CheckBox
+        android:id="@+id/chk_edit"
+        style="@style/EditCheckBoxStyle"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dip"
+        android:clickable="false"
+        android:focusable="false"/>
+
+    
+     <TextView
+        android:id="@+id/tv_handling_status"
+        style="@style/NormalTextSizeStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="9dip"
+        android:layout_toLeftOf="@id/tv_handling_status"
+        android:layout_toRightOf="@id/chk_edit" >
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_fault_info"
+            style="@style/NormalBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:singleLine="true"
+            android:id="@+id/tv_project"
+            style="@style/NormalBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@id/tv_fault_info" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            style="@style/SmallGrayTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_fault_info"
+            android:layout_marginTop="2dip" />
+    </RelativeLayout>
+
+
+</com.shuorigf.streetlampapp.ui.CheckableRelativeLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:paddingLeft="10dip"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+         android:layout_width="wrap_content"
+        android:layout_height="33dip"
+        style="@style/NormalGrayTextSizeStyle"
+        android:text="@string/hot_city"/>
+
+    <com.shuorigf.streetlampapp.ui.WrapHeightGridView
+        android:id="@+id/gv_all_hot_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingBottom="10dip"
+        android:numColumns="4"
+        android:horizontalSpacing="10dip"
+        android:verticalSpacing="10dip"
+        android:scrollbars="none"/>
+</LinearLayout>

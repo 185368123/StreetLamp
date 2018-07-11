@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_login"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <TextView
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/app_title" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="50dip"
+        android:paddingRight="50dip" >
+
+        <LinearLayout
+            android:id="@+id/llyt_login_accout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dip"
+            android:background="@drawable/bg_login_edittext"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:src="@drawable/ic_accout" />
+
+            <EditText
+                android:id="@+id/edt_login_account"
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dip"
+                android:layout_marginRight="17dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/account"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_login_clear"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:src="@drawable/ic_clear" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llyt_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llyt_login_accout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dip"
+            android:background="@drawable/bg_login_edittext"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dip"
+                android:src="@drawable/ic_password" />
+
+            <EditText
+                android:id="@+id/edt_login_password"
+                style="@style/NormalWhiteTextSizeStyle"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dip"
+                android:layout_marginRight="27dip"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_login_show_password"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dip"
+                android:src="@drawable/ic_show_password" />
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/chk_login_remember_password"
+            style="@style/LoginCheckBoxStyle"
+            android:layout_below="@id/llyt_login_password"
+            android:layout_marginTop="20dip"
+            android:drawablePadding="10dip"
+            android:text="@string/remember_password" />
+
+        <CheckBox
+            android:id="@+id/chk_login_automatic_logon"
+            style="@style/LoginCheckBoxStyle"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/llyt_login_password"
+            android:layout_marginTop="20dip"
+            android:drawablePadding="10dip"
+            android:text="@string/automatic_logon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/btn_login_login"
+            style="@style/NormalWhiteTextSizeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+             android:background="@drawable/bg_button_rounded_rectangle_blue"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="50dip"
+            android:text="@string/login" />
+    </RelativeLayout>
+
+</LinearLayout>

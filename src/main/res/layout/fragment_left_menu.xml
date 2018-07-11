@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:background="@drawable/bg_left_menu" >
+
+    <ImageView
+        android:id="@+id/iv_left_menu_user_image"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dip"
+        android:src="@drawable/ic_user_type" />
+
+    <LinearLayout
+        android:id="@+id/llyt_left_menu_company_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_left_menu_user_image"
+        android:layout_marginLeft="19dip"
+        android:layout_marginRight="19dip"
+        android:layout_marginTop="29dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_company_name"
+            android:drawablePadding="10dip"
+            android:text="@string/company" />
+
+        <TextView
+            android:id="@+id/tv_left_menu_company_name_value"
+            style="@style/NormalBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/llyt_left_menu_company_name"
+        android:id="@+id/llyt_left_menu_user_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dip"
+        android:layout_marginRight="19dip"
+        android:layout_marginTop="29dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_user_account"
+            android:drawablePadding="10dip"
+            android:text="@string/user_account" />
+
+        <TextView
+             android:id="@+id/tv_left_menu_user_account_value"
+            style="@style/NormalBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/llyt_left_menu_user_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="19dip"
+        android:layout_marginRight="19dip"
+        android:layout_marginTop="29dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/NormalGrayTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_user_type"
+            android:drawablePadding="10dip"
+            android:text="@string/user_type" />
+
+        <TextView
+             android:id="@+id/tv_left_menu_user_type_value"
+            style="@style/NormalBlackTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dip"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dip"
+        android:layout_marginLeft="62dip"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:padding="10dip"
+            android:id="@+id/tv_left_menu_setting"
+            style="@style/NormalBlueTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_setting"
+            android:drawablePadding="10dip"
+            android:text="@string/setting" />
+
+        <TextView
+            android:padding="10dip"
+            android:id="@+id/tv_left_menu_exit"
+            style="@style/NormalBlueTextSizeStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dip"
+            android:drawableLeft="@drawable/ic_exit"
+            android:drawablePadding="10dip"
+            android:text="@string/exit" />
+    </LinearLayout>
+
+</RelativeLayout>

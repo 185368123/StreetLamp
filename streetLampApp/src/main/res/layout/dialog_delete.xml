@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+    
+     <TextView
+        android:id="@+id/tv_show_content"
+        style="@style/MiddleBlackTextSizeStyle"
+        android:layout_width="match_parent"
+        android:layout_height="77dip"
+        android:gravity="center" />
+     
+     <View 
+         style="@style/backgroundColorLineHorizontall"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_cancel"
+            style="@style/NormalBlackTextSizeStyle"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+        
+        <View 
+            android:layout_marginTop="10dip"
+            android:layout_marginBottom="10dip"
+         style="@style/backgroundColorLineVertical"
+         />
+
+        <Button
+             android:id="@+id/btn_confirm"
+             style="@style/NormalBlackTextSizeStyle"
+            android:background="@null"
+            android:layout_weight="1"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm" />
+    </LinearLayout>
+
+
+</LinearLayout>
