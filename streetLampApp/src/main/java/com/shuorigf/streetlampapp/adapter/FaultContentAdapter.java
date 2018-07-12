@@ -3,7 +3,7 @@ package com.shuorigf.streetlampapp.adapter;
 import java.util.List;
 
 import com.shuorigf.streetlampapp.R;
-import com.shuorigf.streetlampapp.data.FaultData.Data.Fault;
+import com.shuorigf.streetlampapp.data.FaultData.DataBean.ListBean.HistoryListBean;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class FaultContentAdapter extends BaseAdapter {
 	private Context mContext;
 	private LayoutInflater mInflater;
-	private List<Fault> mFaults;
+	private List<HistoryListBean> mFaults;
 
 	public FaultContentAdapter(Context context) {
 		this.mContext = context;
@@ -23,7 +23,7 @@ public class FaultContentAdapter extends BaseAdapter {
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
-	public void addFaults(List<Fault> faults) {
+	public void addFaults(List<HistoryListBean> faults) {
 		if (mFaults == null) {
 			mFaults = faults;
 		} else {
@@ -45,7 +45,7 @@ public class FaultContentAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public Fault getItem(int position) {
+	public HistoryListBean getItem(int position) {
 		return mFaults == null ? null : mFaults.get(position);
 	}
 
@@ -74,7 +74,7 @@ public class FaultContentAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		Fault fault = mFaults.get(position);
+		HistoryListBean fault = mFaults.get(position);
 		int stageId = R.string.unknown;
 		if(fault.getStralarmtype() != null) {
 			if(fault.getStralarmtype().contains("过放")) {
@@ -110,9 +110,9 @@ public class FaultContentAdapter extends BaseAdapter {
 		holder.project.setText(fault.getProject());
 		holder.time.setText(fault.getUpdatetime());
 		holder.handlingStatus.setTextColor(mContext.getResources().getColor(
-				fault.getStatus() == 0 ? R.color.red : R.color.text_gray));
+				fault.getStatusX() .equals("0")? R.color.red : R.color.text_gray));
 		holder.handlingStatus
-				.setText(fault.getStatus() == 0 ? R.string.not_processed
+				.setText(fault.getStatusX() .equals("0") ? R.string.not_processed
 						: R.string.processed);
 		return convertView;
 	}

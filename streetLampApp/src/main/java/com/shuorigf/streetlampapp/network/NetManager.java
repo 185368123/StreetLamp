@@ -59,6 +59,7 @@ public class NetManager {
 	
 	private static final String SERVER_URL1 = "http://139.196.213.241/api/";
 	private static final String SERVER_URL = "http://123.57.20.89/api/";
+	private static final String SERVER_URL_NEW = " http://new.solar-iot.com/api/";
 	//see -> http://139.196.213.241/doc/api.html
 	//    normal: http://123.57.20.89/api/
 	//   test: http://139.196.213.241/api/
@@ -91,6 +92,11 @@ public class NetManager {
 	public static final String FAULT_DETAILS_URL =SERVER_URL+"alarm/detail";//5.0.2
 	public static final String FAULT_UPDATE_URL =SERVER_URL+"alarm/set";//5.0.3
 	public static final String FAULT_DEL_URL =SERVER_URL+"alarm/del";//5.0.4
+	public static final String FAULT_LIST_URL_NEW =SERVER_URL_NEW+"alarm/get";//5.0.1
+	public static final String FILTER_PROJECT_URL =SERVER_URL_NEW+"device/project/get";
+	public static final String FILTER_FAILURE_TYPE_URL =SERVER_URL_NEW+"home/alarm_type_list";
+	public static final String FILTER_DEAL_URL =SERVER_URL+"device/project/get";
+
 	private LoginData mLoginData=null;
 
 	private static NetManager manager = null;

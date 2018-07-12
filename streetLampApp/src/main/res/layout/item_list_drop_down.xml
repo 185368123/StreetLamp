@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="15px"
+    android:paddingBottom="15px"
+    android:background="@color/white"
+    tools:context="com.car.cslm.widget.drop_down_menu.DefaultDropDownAdapter">
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        />
+
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="28px"
+        android:layout_height="20px"
+        android:layout_marginRight="30px"
+        android:src="@drawable/filter_item_choose"
+        android:id="@+id/iv"/>
+
+</RelativeLayout>

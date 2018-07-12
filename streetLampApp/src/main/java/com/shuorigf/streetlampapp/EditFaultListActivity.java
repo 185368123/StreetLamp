@@ -13,7 +13,7 @@ import com.shuorigf.streetlampapp.callback.GenericsCallback;
 import com.shuorigf.streetlampapp.callback.JsonGenericsSerializator;
 import com.shuorigf.streetlampapp.data.FaultData;
 import com.shuorigf.streetlampapp.data.LoginData;
-import com.shuorigf.streetlampapp.data.FaultData.Data.Fault;
+import com.shuorigf.streetlampapp.data.FaultData.DataBean.ListBean.HistoryListBean;
 import com.shuorigf.streetlampapp.data.ResultCodeData;
 import com.shuorigf.streetlampapp.dialog.DialogFactory;
 import com.shuorigf.streetlampapp.domain.Page;
@@ -119,7 +119,7 @@ public class EditFaultListActivity extends NavigationBarActivity implements OnCl
         OkHttpUtils
                 .post()
                 .tag(this)
-                .url(NetManager.FAULT_LIST_URL)
+                .url(NetManager.FAULT_LIST_URL_NEW)
                 .params(params)
                 .build()
                 .execute(new GenericsCallback<FaultData>(new JsonGenericsSerializator())
@@ -158,7 +158,7 @@ public class EditFaultListActivity extends NavigationBarActivity implements OnCl
 	}
 	
 	private void setFaultData(FaultData faultData) {
-		List<Fault> mFaults = faultData.getData().getAlarm();
+		List<HistoryListBean> mFaults = faultData.getData().getList().getHistory_list();
 		if (mFaults!=null) {
 			mEditFaultContentAdapter.addFaults(mFaults);
 			if (mSelectAllChk.isChecked()) {

@@ -322,5 +322,4 @@
         <item name="android:windowBackground">@color/transparent</item>
         <!-- 设置完全透明 -->
     </style>
-
 </resources>

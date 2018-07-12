@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.shuorigf.streetlampapp.R;
-import com.shuorigf.streetlampapp.data.FaultData.Data.Fault;
+import com.shuorigf.streetlampapp.data.FaultData.DataBean.ListBean.HistoryListBean;
 import com.shuorigf.streetlampapp.data.LampControlData.Data.LampControl;
 
 import android.content.Context;
@@ -17,7 +17,7 @@ import android.widget.TextView;
 public class EditFaultContentAdapter extends BaseAdapter {
 	private Context mContext;
 	private LayoutInflater mInflater;
-	private List<Fault> mFaults;
+	private List<HistoryListBean> mFaults;
 
 	public EditFaultContentAdapter(Context context) {
 		this.mContext = context;
@@ -25,10 +25,10 @@ public class EditFaultContentAdapter extends BaseAdapter {
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	}
 
-	public void addFaults(List<Fault> faults) {
-		List<Fault> filterFaults = new ArrayList<Fault>();
-		for (Fault fault : faults) {
-			if (fault.getStatus()==0) {
+	public void addFaults(List<HistoryListBean> faults) {
+		List<HistoryListBean> filterFaults = new ArrayList<HistoryListBean>();
+		for (HistoryListBean fault : faults) {
+			if (fault.getStatusX().equals("0")) {
 				filterFaults.add(fault);
 			}
 		}
@@ -47,7 +47,7 @@ public class EditFaultContentAdapter extends BaseAdapter {
 		}
 	}
 	
-	public List<Fault> getListData() {
+	public List<HistoryListBean> getListData() {
 		return mFaults;
 	}
 
@@ -57,7 +57,7 @@ public class EditFaultContentAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public Fault getItem(int position) {
+	public HistoryListBean getItem(int position) {
 		return mFaults == null ? null : mFaults.get(position);
 	}
 
@@ -86,7 +86,7 @@ public class EditFaultContentAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		Fault fault = mFaults.get(position);
+		HistoryListBean fault = mFaults.get(position);
 		int stageId = R.string.unknown;
 		if(fault.getStralarmtype() != null) {
 			if(fault.getStralarmtype().contains("过放")) {
@@ -122,9 +122,9 @@ public class EditFaultContentAdapter extends BaseAdapter {
 		holder.project.setText(fault.getProject());
 		holder.time.setText(fault.getUpdatetime());
 		holder.handlingStatus.setTextColor(mContext.getResources().getColor(
-				fault.getStatus() == 0 ? R.color.red : R.color.text_gray));
+				fault.getStatusX() .equals("0") ? R.color.red : R.color.text_gray));
 		holder.handlingStatus
-				.setText(fault.getStatus() == 0 ? R.string.not_processed
+				.setText(fault.getStatusX() .equals("0") ? R.string.not_processed
 						: R.string.processed);
 		return convertView;
 	}
