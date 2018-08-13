@@ -24,7 +24,7 @@
             style="@style/LeftTextViewStyle"
             android:text="@string/network_number" />
 
-        <EditText
+        <TextView
             android:id="@+id/edt_edit_network_network_number_value"
             style="@style/rightEditTextStyle"
             android:hint="@string/please_enter_network_number" />

@@ -382,9 +382,15 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
 	public void onDestroy() {
 		++mBaiduTaskId;
 		isBitmapRecycle = true;
-		mbdLampControlErr.recycle();
-		mbdLampControlOff.recycle();
-		mbdLampControlOn.recycle();
+		if (mbdLampControlErr!=null){
+			mbdLampControlErr.recycle();
+		}
+		if (mbdLampControlOff!=null){
+			mbdLampControlOff.recycle();
+		}
+		if (mbdLampControlOn!=null){
+			mbdLampControlOn.recycle();
+		}
 		super.onDestroy();
 		mMapView.onDestroy();
 		mMapView = null;

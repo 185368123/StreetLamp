@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android Studio Workspace\\StreetLamp\\streetLampApp\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-et-rEE\\values-et-rEE.xml",
+            "outputFile": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-et-rEE\\values-et-rEE.xml",
             "map": [
                 {
                     "source": "C:\\Users\\18536\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\7f0e7098c8de3b65aaf4d160e98e2af6\\res\\values-et-rEE\\values.xml",

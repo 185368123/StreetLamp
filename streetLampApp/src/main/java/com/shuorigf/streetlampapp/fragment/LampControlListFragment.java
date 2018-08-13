@@ -36,9 +36,6 @@ public class LampControlListFragment extends BaseFragment implements XListView.I
 		  LampControlListFragment lampControllistFragment = new LampControlListFragment();
 
 		  lampControllistFragment.network_id = network_id;
-//		  Bundle bundle = new Bundle();
-//			bundle.putString("network_id", network_id);
-//			lampControllistFragment.setArguments(bundle);
 	        return lampControllistFragment;
 	    }
 	  
@@ -49,8 +46,7 @@ public class LampControlListFragment extends BaseFragment implements XListView.I
 	private  List<LampControl> mLampControls;
 	
 	private LoginData mLoginData;
-//	private LampControlData mLampControlData;
-	
+
 	
 
 	@Override
@@ -61,7 +57,6 @@ public class LampControlListFragment extends BaseFragment implements XListView.I
 		mLampControlContentLv.setPullLoadEnable(false);
 		mLampControlContentLv.setXListViewListener(this);
 		mLampControlContentLv.setOnItemClickListener(new OnItemClickListener() {
-
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -78,12 +73,7 @@ public class LampControlListFragment extends BaseFragment implements XListView.I
 		
 		return view;
 	}
-	
-//	@Override
-//	public void onCreate(Bundle savedInstanceState) {
-//		super.onCreate(savedInstanceState);
-//		network_id = getArguments().getString("network_id");
-//	}
+
 
 	public void initData() {
 		mLoginData = ((StreetlampApp)mActivity.getApplication()).mLoginData;

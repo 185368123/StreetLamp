@@ -36,7 +36,7 @@ public final class R {
         public static final int quit = 0x7f070127;
         public static final int restart_preview = 0x7f07013d;
         public static final int return_scan_result = 0x7f07013e;
-        public static final int viewfinder_view = 0x7f07020d;
+        public static final int viewfinder_view = 0x7f070210;
     }
     public static final class layout {
         public static final int capture = 0x7f090038;

@@ -2,8 +2,6 @@ package com.shuorigf.streetlampapp.dialog;
 
 
 import com.shuorigf.streetlampapp.R;
-
-import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.view.View;
@@ -35,10 +33,4 @@ public class DialogFactory {
 		titleTv.setText(tipId);
 		return dialog;
 	}
-	
-//	public static void ToastDialog(Context context, String title, String msg) {
-//		new AlertDialog.Builder(context).setTitle(title).setMessage(msg)
-//				.setPositiveButton("ȷ��", null).create().show();
-//	}
-
 }

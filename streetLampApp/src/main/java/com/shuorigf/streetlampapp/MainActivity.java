@@ -134,7 +134,6 @@ public class MainActivity extends FragmentActivity implements OnClickListener {
 		case 2:
 			roleId = R.string.corporate_client;
 			break;
-
 		default:
 			break;
 		}

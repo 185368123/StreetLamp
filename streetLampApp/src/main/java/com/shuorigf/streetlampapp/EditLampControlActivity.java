@@ -438,7 +438,7 @@ public class EditLampControlActivity extends NavigationBarActivity implements
 		OkHttpUtils
 				.post()
 				.tag(this)
-				.url(NetManager.LAMP_CONTROL_LOAD_SETTING_URL)
+				.url(NetManager.LAMP_CONTROL_LOAD_SETTING_URL_NEW)
 				.params(params)
 				.build()
 				.execute(

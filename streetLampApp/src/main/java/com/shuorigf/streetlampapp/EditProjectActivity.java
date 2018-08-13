@@ -44,7 +44,7 @@ public class EditProjectActivity extends NavigationBarActivity implements
 	private static final int SAVE_CALLBACK_ID = 100;
 	private static final int DEL_CALLBACK_ID = 101;
 	private EditText mProjectNameEdt;
-	private EditText mProjectNumberEdt;
+	private TextView mProjectNumberEdt;
 	private EditText mCustomerNameEdt;
 	private EditText mCompanyNameEdt;
 	private EditText mDetailedAddressEdt;
@@ -134,7 +134,7 @@ public class EditProjectActivity extends NavigationBarActivity implements
 		View view = View.inflate(this, R.layout.activity_edit_project, null);
 		mProjectNameEdt = (EditText) view
 				.findViewById(R.id.edt_edit_project_project_name_value);
-		mProjectNumberEdt = (EditText) view
+		mProjectNumberEdt = (TextView) view
 				.findViewById(R.id.edt_edit_project_project_number_value);
 		mCustomerNameEdt = (EditText) view
 				.findViewById(R.id.edt_edit_project_customer_name_value);

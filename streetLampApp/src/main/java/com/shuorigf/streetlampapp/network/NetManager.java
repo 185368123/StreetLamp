@@ -28,15 +28,9 @@ import org.json.JSONObject;
 
 
 import com.google.gson.Gson;
-import com.shuorigf.streetlampapp.callback.GenericsCallback;
-import com.shuorigf.streetlampapp.callback.JsonGenericsSerializator;
-import com.shuorigf.streetlampapp.data.DeviceData;
-import com.shuorigf.streetlampapp.data.DeviceLampcontrolGetData;
-import com.shuorigf.streetlampapp.data.HomeData;
 import com.shuorigf.streetlampapp.data.LoginData;
-import com.shuorigf.streetlampapp.data.ProjectData;
 import com.shuorigf.streetlampapp.data.WeatherData;
-import com.zhy.http.okhttp.OkHttpUtils;
+
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -59,7 +53,7 @@ public class NetManager {
 	
 	private static final String SERVER_URL1 = "http://139.196.213.241/api/";
 	private static final String SERVER_URL = "http://123.57.20.89/api/";
-	private static final String SERVER_URL_NEW = " http://new.solar-iot.com/api/";
+	private static final String SERVER_URL_NEW = "http://new.solar-iot.com/api/";
 	//see -> http://139.196.213.241/doc/api.html
 	//    normal: http://123.57.20.89/api/
 	//   test: http://139.196.213.241/api/
@@ -85,6 +79,7 @@ public class NetManager {
 	public static final String LAMP_CONTROL_ADD_OR_EDIT_URL =SERVER_URL+"device/lampcontrol/save";//3.3.6
 	public static final String LAMP_CONTROL_DETAILS_URL =SERVER_URL+"device/lampcontrol/detail";//3.3.8
 	public static final String LAMP_CONTROL_LOAD_SETTING_URL =SERVER_URL+"device/lampcontrol/load_setting";//3.3.9
+	public static final String LAMP_CONTROL_LOAD_SETTING_URL_NEW =SERVER_URL_NEW+"device/lampcontrol/load_setting";
 	public static final String LAMP_CONTROL_BATTERY_SETTING_URL =SERVER_URL+"device/lampcontrol/battery_setting";//3.3.9
 	public static final String LAMP_UPDATE_HISTORY_URL =SERVER_URL+"device/lampcontrol/viewloglist";//3.3.11
 	public static final String REPORT_URL =SERVER_URL+"report/data";//4.0
@@ -112,167 +107,7 @@ public class NetManager {
 		}
 		return manager;
 	}
-//	public LoginData getLoginData(String user,String pwd,String imei)
-//	{
-//		Map<String, String> params = new HashMap<String, String>();
-//        params.put("username", user);
-//        params.put("password", pwd);
-//        params.put("client_key", imei);
-//        OkHttpUtils
-//                .post()
-//                .url(LOGIN_URL)
-//                .params(params)
-//                .build()
-//                .execute(new GenericsCallback<LoginData>(new JsonGenericsSerializator())
-//                      {
-//                	
-//                	
-//                      @Override
-//                      public void onError(Call call, Exception e, int id)
-//                      {
-//                    	  e.printStackTrace();
-//                    	  Log.e(TAG, "LoginData:"+e.getMessage());
-//                      }
-//					@Override
-//					public void onResponse(LoginData loginData, int id) {
-//						 mLoginData = loginData;
-//					}
-//                  });
-//		
-//		
-//		return mLoginData;
-//	}
-//	public HomeData getHomeData()
-//	{
-//		return  getHomeData(mLoginData.getUsername(),mLoginData.getMsg(),mLoginData.getClient_key());
-//	}
-//
-//	@SuppressLint("NewApi")
-//	public HomeData getHomeData(String user,String imei,String token)
-//	{
-//		String result = null;
-//		NameValuePair pairusername = new BasicNameValuePair("username", user);
-//		NameValuePair pairimei = new BasicNameValuePair("client_key", imei);
-//		NameValuePair pairtoken = new BasicNameValuePair("token", token);
-//		List<NameValuePair> pairList = new ArrayList<NameValuePair>();
-//		pairList.add(pairusername);
-//		pairList.add(pairtoken);
-//		pairList.add(pairimei);
-//		Log.d(TAG,"user:"+user+",imei:"+imei+",token:"+token);
-//		StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
-//		StrictMode.setThreadPolicy(policy);
-//		try
-//		{
-//			HttpEntity requestHttpEntity = new UrlEncodedFormEntity(
-//					pairList);
-//			HttpPost httpPost = new HttpPost(HOMEDATA_URL);
-//			httpPost.setEntity(requestHttpEntity);
-//			HttpClient httpClient = new DefaultHttpClient();
-//			HttpResponse response = httpClient.execute(httpPost);
-//			result =  EntityUtils.toString(response.getEntity(), "UTF-8");
-//			Log.d(TAG,"result:"+result);
-//
-//			//     if (result.startsWith("{")) {
-//			try {
-//				mHomeData = new HomeData( new JSONObject(result));
-//				return mHomeData;
-//			} catch (JSONException e) {
-//				e.printStackTrace();
-//			}
-//			//}
-//		}
-//		catch (Exception e)
-//		{
-//			e.printStackTrace();
-//		}
-//		return mHomeData;
-//	}
-//	@SuppressLint("NewApi")
-//	public DeviceData getDeviceData(int projectID)
-//	{
-//		DeviceData data=null;
-//		String result = null;
-//		NameValuePair pairusername = new BasicNameValuePair("username", mLoginData.getMsg());
-//		NameValuePair pairimei = new BasicNameValuePair("client_key", mLoginData.getMsg());
-//		NameValuePair pairtoken = new BasicNameValuePair("token", mLoginData.getMsg());
-//		NameValuePair project_id = new BasicNameValuePair("project_id",projectID+"");
-//		List<NameValuePair> pairList = new ArrayList<NameValuePair>();
-//		pairList.add(pairusername);
-//		pairList.add(pairtoken);
-//		pairList.add(pairimei);
-//		if(projectID >=0)
-//		{
-//			pairList.add(project_id);
-//		}	
-//		StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
-//		StrictMode.setThreadPolicy(policy);
-//		try
-//		{
-//			HttpEntity requestHttpEntity = new UrlEncodedFormEntity(
-//					pairList);
-//			HttpPost httpPost = new HttpPost(DEVICEDATA_URL);
-//			httpPost.setEntity(requestHttpEntity);
-//			HttpClient httpClient = new DefaultHttpClient();
-//			HttpResponse response = httpClient.execute(httpPost);
-//			result =  EntityUtils.toString(response.getEntity(), "UTF-8");
-//			Log.d(TAG,"result:"+result);
-//			try {
-//				data = new DeviceData( new JSONObject(result));
-//				return data;
-//			} catch (JSONException e) {
-//				e.printStackTrace();
-//			}
-//		}
-//		catch (Exception e)
-//		{
-//			e.printStackTrace();
-//		}
-//		return data;
-//	}
 
-//
-//	@SuppressLint("NewApi")
-//	public ProjectData getProjectData(String keyword)
-//	{
-//		ProjectData data=null;
-//		String result = null;
-//		NameValuePair pairusername = new BasicNameValuePair("username", mLoginData.getClient_key());
-//		NameValuePair pairimei = new BasicNameValuePair("client_key", mLoginData.getMsg());
-//		NameValuePair pairtoken = new BasicNameValuePair("token", mLoginData.getMsg());
-//		List<NameValuePair> pairList = new ArrayList<NameValuePair>();
-//		pairList.add(pairusername);
-//		pairList.add(pairtoken);
-//		pairList.add(pairimei);
-//		if(keyword != null  && !keyword.equals(""))
-//		{
-//			NameValuePair keywordpair = new BasicNameValuePair("keyword",keyword);
-//			pairList.add(keywordpair);
-//		}	
-//		StrictMode.ThreadPolicy policy=new StrictMode.ThreadPolicy.Builder().permitAll().build();
-//		StrictMode.setThreadPolicy(policy);
-//		try
-//		{
-//			HttpEntity requestHttpEntity = new UrlEncodedFormEntity(
-//					pairList);
-//			HttpPost httpPost = new HttpPost(PROJECTGET_URL);
-//			httpPost.setEntity(requestHttpEntity);
-//			HttpClient httpClient = new DefaultHttpClient();
-//			HttpResponse response = httpClient.execute(httpPost);
-//			result =  EntityUtils.toString(response.getEntity(), "UTF-8");
-//			Log.d(TAG,"result:"+result);
-//			try {
-//				data = new ProjectData( new JSONObject(result));
-//				return data;
-//			} catch (JSONException e) {
-//				e.printStackTrace();
-//			}
-//		}
-//		catch (Exception e)
-//		{
-//			e.printStackTrace();
-//		}
-//		return data;
-//	}
 	
 	@SuppressLint("NewApi")
 	public String callApiForUrl(String url,List<NameValuePair> pair)

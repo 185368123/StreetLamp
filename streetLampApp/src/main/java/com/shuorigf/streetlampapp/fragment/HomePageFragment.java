@@ -1,5 +1,6 @@
 package com.shuorigf.streetlampapp.fragment;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -62,6 +63,7 @@ public class HomePageFragment extends BaseFragment implements OnClickListener {
 	private TextView mFailureRateTV;
 
 	private TextView mTotalGeneratingCapacityTV;
+	private TextView mTotalGeneratingCapacityTVUnit;
 	private TextView mTotalInstalledCapacityTV;
 	private TextView mTotalInstalledLightsTV;
 	private TextView mTotalNetworkNumberTV;
@@ -69,6 +71,8 @@ public class HomePageFragment extends BaseFragment implements OnClickListener {
 	private TextView mSaveStandardCoalTV;
 	private TextView mCumulativeReductionCO2TV;
 	private TextView mCumulativeReductionSO2TV;
+	private TextView mCumulativeReductionCO2TVUnit;
+	private TextView mCumulativeReductionSO2TVUnit;
 
 	private LoginData mLoginData;
 
@@ -108,6 +112,8 @@ public class HomePageFragment extends BaseFragment implements OnClickListener {
 
 		mTotalGeneratingCapacityTV = (TextView) view
 				.findViewById(R.id.tv_homepage_total_generating_capacity_value);
+		mTotalGeneratingCapacityTVUnit = (TextView) view
+				.findViewById(R.id.tv_homepage_total_generating_capacity_unit);
 		mTotalInstalledCapacityTV = (TextView) view
 				.findViewById(R.id.tv_homepage_total_installed_capacity_value);
 		mTotalInstalledLightsTV = (TextView) view
@@ -119,8 +125,12 @@ public class HomePageFragment extends BaseFragment implements OnClickListener {
 				.findViewById(R.id.tv_homepage_save_standard_coal_value);
 		mCumulativeReductionCO2TV = (TextView) view
 				.findViewById(R.id.tv_homepage_cumulative_reduction_co2_value);
+		mCumulativeReductionCO2TVUnit = (TextView) view
+				.findViewById(R.id.tv_homepage_cumulative_reduction_co2_unit);
 		mCumulativeReductionSO2TV = (TextView) view
 				.findViewById(R.id.tv_homepage_cumulative_reduction_so2_value);
+		mCumulativeReductionSO2TVUnit = (TextView) view
+				.findViewById(R.id.tv_homepage_cumulative_reduction_so2_unit);
 
 		return view;
 	}
@@ -345,8 +355,8 @@ public class HomePageFragment extends BaseFragment implements OnClickListener {
 		mRingRate.setCircleRadian(homeData.getData().getOnline_rate(), homeData
 				.getData().getLighting_rate(), homeData.getData()
 				.getFailure_rate());
-		mTotalGeneratingCapacityTV.setText(homeData.getData().getTotal_power()
-				+ "");
+		//mTotalGeneratingCapacityTV.setText(homeData.getData().getTotal_power() + "");
+		setTextAdaptive(mTotalGeneratingCapacityTV,mTotalGeneratingCapacityTVUnit,"Mwh",homeData.getData().getTotal_power());
 		mTotalInstalledCapacityTV.setText(homeData.getData().getTotal_install()
 				+ "");
 		mTotalInstalledLightsTV
@@ -354,10 +364,10 @@ public class HomePageFragment extends BaseFragment implements OnClickListener {
 		mTotalNetworkNumberTV.setText(homeData.getData().getTotal_network()
 				+ "");
 		mSaveStandardCoalTV.setText(homeData.getData().getCoal_saving() + "");
-		mCumulativeReductionCO2TV.setText(homeData.getData().getCo2_emission()
-				+ "");
-		mCumulativeReductionSO2TV.setText(homeData.getData().getSo2_emission()
-				+ "");
+		//mCumulativeReductionCO2TV.setText(homeData.getData().getCo2_emission() + "");
+		setTextAdaptive(mCumulativeReductionCO2TV,mCumulativeReductionCO2TVUnit,"t",homeData.getData().getCo2_emission());
+		setTextAdaptive(mCumulativeReductionSO2TV,mCumulativeReductionSO2TVUnit,"t",homeData.getData().getSo2_emission());
+		//mCumulativeReductionSO2TV.setText(homeData.getData().getSo2_emission()+ "");
 	}
 
 	public LocationClientOption getClientOption() {
@@ -467,4 +477,14 @@ public class HomePageFragment extends BaseFragment implements OnClickListener {
 		}
 	}
 
+	public void setTextAdaptive(TextView tv_value,TextView tv_unit,String unit,Float value){
+        if (value>999999){
+            DecimalFormat df = new DecimalFormat("#.00");
+        	tv_unit.setText(unit);
+        	tv_value.setText(df.format(value/1000)+"");
+		}else {
+			tv_value.setText(value+"");
+		}
+	}
 }
+

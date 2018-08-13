@@ -1,0 +1,4 @@
+#Mon Aug 13 16:11:07 CST 2018
+base.0=D\:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\transforms\\dexMerger\\debug\\5
+path.0=classes.dex
+renamed.0=classes.dex

@@ -53,7 +53,7 @@ public class EditNetworkActivity extends NavigationBarActivity implements
 	private static final int DEL_CALLBACK_ID = 101;
 
 	private EditText mBelongsProjectEdt;
-	private EditText mNetworkNumberEdt;
+	private TextView mNetworkNumberEdt;
 	private EditText mNetworkNameEdt;
 	private EditText mSectionEdt;
 	private EditText mSIMNumberEdt;
@@ -146,7 +146,7 @@ public class EditNetworkActivity extends NavigationBarActivity implements
 		mBelongsProjectEdt = (EditText) view
 				.findViewById(R.id.edt_edit_network_belongs_to_the_project_value);
 		mBelongsProjectEdt.setOnClickListener(this);
-		mNetworkNumberEdt = (EditText) view
+		mNetworkNumberEdt = (TextView) view
 				.findViewById(R.id.edt_edit_network_network_number_value);
 		mNetworkNameEdt = (EditText) view
 				.findViewById(R.id.edt_edit_network_network_name_value);

@@ -1,0 +1,116 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.shuorigf.bluetooth.streetlamp"
+        minSdkVersion 18
+        targetSdkVersion 26
+        versionCode 12
+        versionName "1.9"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            ["armeabi", "armeabi-v7a", "x86", "mips"]
+        }
+    }
+
+//    aaptOptions {
+//        cruncherEnabled = false
+//        useNewCruncher = false
+//    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    flavorDimensions "default"
+    productFlavors {
+        clx {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "clx"]
+            dimension 'default'
+        }
+    }
+
+    productFlavors.all {
+        flavor -> flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+    }
+
+    signingConfigs {
+        defaultConifg {
+            android.applicationVariants.all { variant ->
+                if (variant.productFlavors[0].name == "clx") {
+                    // 服务器地址
+                    buildConfigField "String", "HOST", "\"http://192.168.168.1/\""
+                } else {
+                    // 服务器地址
+                    buildConfigField "String", "HOST", "\"http://192.168.168.1/\""
+                }
+                variant.outputs.all {
+                    outputFileName = "streetlamp_v${variant.versionName}_release.apk"
+                }
+            }
+        }
+
+        release {
+            storeFile file("streetlamp")
+            storePassword "s123456"
+            keyAlias "streetlamp"
+            keyPassword "s123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            // 混淆
+            minifyEnabled false
+            debuggable true
+
+        }
+
+        release {
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            // 混淆
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            java.srcDirs = ['src/main/java']
+        }
+        androidTest {
+            setRoot 'src/tests'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.0.2'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:design:26.0.2'
+    compile 'com.android.support:recyclerview-v7:26.0.2'
+    compile 'com.android.support:cardview-v7:26.0.2'
+    compile 'com.android.support:support-annotations:26.0.2'
+    compile 'com.android.support:multidex:1.0.3'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    compile 'pub.devrel:easypermissions:1.0.0'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.2'
+    compile 'com.google.code.gson:gson:2.8.1'
+    compile 'com.contrarywind:Android-PickerView:3.2.7'
+    compile 'pub.devrel:easypermissions:1.1.0'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+}

@@ -154,7 +154,6 @@ public class TotalLampControlListActivity extends FragmentActivity implements
 	        });
 		mSearchResultLv = (ListView) findViewById(R.id.lv_total_lamp_control_list_search_result);
 		mSearchResultLv.setOnItemClickListener(new OnItemClickListener() {
-
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
@@ -252,8 +251,8 @@ public class TotalLampControlListActivity extends FragmentActivity implements
 	        }
 			
 		}
-	
-	
+
+
 //	private void getProjectData() {
 //		Map<String, String> params = new HashMap<String, String>();
 //        params.put("username", mLoginData.getUsername());
@@ -266,7 +265,7 @@ public class TotalLampControlListActivity extends FragmentActivity implements
 //                .build()
 //                .execute(new GenericsCallback<ProjectData>(new JsonGenericsSerializator())
 //                      {
-//                	
+//
 //					@Override
 //                      public void onError(Call call, Exception e, int id)
 //                      {
@@ -279,14 +278,13 @@ public class TotalLampControlListActivity extends FragmentActivity implements
 //						 if(projectData.getStatus().equals(NetManager.SUCCESS)){
 ////							    mProjectData = projectData;
 //							    setProjectData(projectData);
-//							    
 //						 }else {
 //							 Toast.makeText(TotalLampControlListActivity.this, projectData.getMsg(),
 //										Toast.LENGTH_SHORT).show();
 //						 }
-//					}	
+//					}
 //                  });
-//				
+//
 //	}
 //
 //	private void setProjectData(ProjectData projectData) {
@@ -297,7 +295,7 @@ public class TotalLampControlListActivity extends FragmentActivity implements
 //			mTitleTv.setText(project_name);
 //			getNetworkData(project_id);
 //		}
-//		
+//
 //	}
 	
 	private void getNetworkData() {
