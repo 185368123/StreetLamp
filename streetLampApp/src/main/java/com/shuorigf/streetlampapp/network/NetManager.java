@@ -53,6 +53,7 @@ public class NetManager {
 	
 	private static final String SERVER_URL1 = "http://139.196.213.241/api/";
 	private static final String SERVER_URL = "http://123.57.20.89/api/";
+	private static final String SERVER_URL_ = "http://test.solar-iot.com/api/";
 	private static final String SERVER_URL_NEW = "http://new.solar-iot.com/api/";
 	//see -> http://139.196.213.241/doc/api.html
 	//    normal: http://123.57.20.89/api/
@@ -145,7 +146,6 @@ public class NetManager {
 			e.printStackTrace();
 		}
 		return result;
-		
 	}
 
 	@SuppressLint("NewApi")
@@ -158,7 +158,6 @@ public class NetManager {
 		StrictMode.setThreadPolicy(policy);
 		try
 		{
-
 			HttpPost httpPost = new HttpPost(GETWEATHERDAT_URL);
 			HttpClient httpClient = new DefaultHttpClient();
 			HttpResponse response = httpClient.execute(httpPost);
@@ -167,7 +166,6 @@ public class NetManager {
 			Gson gson = new Gson();
 			data = gson.fromJson(result, WeatherData.class);
 			return data;
-
 		}
 		catch (Exception e)
 		{
@@ -175,31 +173,5 @@ public class NetManager {
 		}
 		return null;
 	}
-	
-//	public DeviceLampcontrolGetData getDeviceLampcontrolGetData(int project_id , String keyword ,int status)
-//	{
-//		DeviceLampcontrolGetData data=null;
-//		NameValuePair project_id_pair = new BasicNameValuePair("project_id",project_id+"");
-//		NameValuePair keyword_pair = new BasicNameValuePair("keyword",keyword);
-//		NameValuePair status_pair = new BasicNameValuePair("status",status+"");
-//		List<NameValuePair> pairList = new ArrayList<NameValuePair>();
-//		if(project_id < 0)
-//		{
-//			pairList.add(project_id_pair);
-//		}
-//		if(keyword != null)
-//		{
-//			pairList.add(keyword_pair);
-//		}
-//		if(status == 0 || 1 == status)
-//		{
-//			pairList.add(status_pair);
-//		}
-//		String result = callApiForUrl(DEVICELAMPCONTORLGET_URL,pairList);
-//		
-//		Gson gson = new Gson();
-//		data = gson.fromJson(result, DeviceLampcontrolGetData.class);
-//		return data;
-//	}
 	
 }

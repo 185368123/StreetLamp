@@ -494,6 +494,7 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
 	}
 
 	Handler mHandler = new Handler();
+
     private void addOverlays() {
      	int id = ++mBaiduTaskId;
 //       	while(mBaiduTaskRuning);
@@ -518,6 +519,8 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
 //    		mBaiduTaskRuning = false;
     		return;
     	}
+    	Log.e("mLampControls数量",""+mLampControls.size());
+
     	for (LampData lampData : mLampControls) {
     		if(id !=  mBaiduTaskId)
     		{
@@ -531,7 +534,7 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
     				MarkerOptions mo = new MarkerOptions().position(ll).icon(mbdLampControlErr).title(lampData.getId()).snippet("0");
         			mBaiduMap.addMarker(mo);
 				}
-    			
+
     		}else {
     			if(isAllLampControl){
     				if(lampData.getStatus()==1){
@@ -539,17 +542,17 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
     						MarkerOptions mo = new MarkerOptions().position(ll).icon(mbdLampControlOn).title(lampData.getId()).snippet("1");
     						mBaiduMap.addMarker(mo);
     					}
-    					
+
     				}else {
     					if (!isBitmapRecycle) {
     						MarkerOptions mo = new MarkerOptions().position(ll).icon(mbdLampControlOff).title(lampData.getId()).snippet("2");
     						mBaiduMap.addMarker(mo);
     					}
-    					
+
     				}
     			}
     		}
-    	
+
     	}
 //    	mBaiduTaskRuning = false;
     }
