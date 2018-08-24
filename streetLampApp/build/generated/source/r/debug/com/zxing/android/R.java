@@ -23,9 +23,9 @@ public final class R {
     public static final class drawable {
         public static final int btn_back_normal = 0x7f06005c;
         public static final int btn_back_press = 0x7f06005d;
-        public static final int ic_launcher = 0x7f060096;
-        public static final int scan_light = 0x7f0600db;
-        public static final int selector_capture_back = 0x7f0600dc;
+        public static final int ic_launcher = 0x7f060097;
+        public static final int scan_light = 0x7f0600dc;
+        public static final int selector_capture_back = 0x7f0600dd;
     }
     public static final class id {
         public static final int decode = 0x7f07004a;

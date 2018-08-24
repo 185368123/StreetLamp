@@ -32,16 +32,16 @@
         "source": "C:\\Users\\18536\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\7f0e7098c8de3b65aaf4d160e98e2af6\\res\\drawable-ldrtl-xhdpi\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
-        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_network_gray.png.flat",
-        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xxhdpi\\ic_network_gray.png"
+        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_homepage_sel.png.flat",
+        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xhdpi\\ic_homepage_sel.png"
     },
     {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_scan.png.flat",
         "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xxhdpi\\ic_scan.png"
     },
     {
-        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_homepage_sel.png.flat",
-        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xhdpi\\ic_homepage_sel.png"
+        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_network_gray.png.flat",
+        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xxhdpi\\ic_network_gray.png"
     },
     {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_abc_ic_menu_share_mtrl_alpha.png.flat",
@@ -52,12 +52,12 @@
         "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xxhdpi\\ic_map_lamp_control_err_status_pop.png"
     },
     {
-        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_total_installed_lights.png.flat",
-        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xxhdpi\\ic_total_installed_lights.png"
-    },
-    {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\layout_fragment_lamp_control_report.xml.flat",
         "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\layout\\fragment_lamp_control_report.xml"
+    },
+    {
+        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_total_installed_lights.png.flat",
+        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xxhdpi\\ic_total_installed_lights.png"
     },
     {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_filter_sel.png.flat",
@@ -68,24 +68,24 @@
         "source": "C:\\Users\\18536\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\7f0e7098c8de3b65aaf4d160e98e2af6\\res\\drawable-mdpi\\abc_textfield_default_mtrl_alpha.9.png"
     },
     {
-        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable_bg_wait_progressbar.xml.flat",
-        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable\\bg_wait_progressbar.xml"
-    },
-    {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_sunrise_time.png.flat",
         "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xhdpi\\ic_sunrise_time.png"
+    },
+    {
+        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable_bg_wait_progressbar.xml.flat",
+        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable\\bg_wait_progressbar.xml"
     },
     {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_total_installed_capacity.png.flat",
         "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xxhdpi\\ic_total_installed_capacity.png"
     },
     {
-        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_launcher.png.flat",
-        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
-    },
-    {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_failure_rate.png.flat",
         "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-xxhdpi\\ic_failure_rate.png"
+    },
+    {
+        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_ic_launcher.png.flat",
+        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_abc_list_divider_mtrl_alpha.9.png.flat",
@@ -2142,6 +2142,10 @@
     {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-mdpi_abc_ic_ab_back_mtrl_am_alpha.png.flat",
         "source": "C:\\Users\\18536\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\7f0e7098c8de3b65aaf4d160e98e2af6\\res\\drawable-mdpi\\abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-hdpi_defaultcluster.png.flat",
+        "source": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\src\\main\\res\\drawable-hdpi\\defaultcluster.png"
     },
     {
         "merged": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\release\\drawable-xxhdpi_ic_charging_status_red.png.flat",

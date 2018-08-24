@@ -1,23 +1,23 @@
 {
     "logs": [
         {
-            "outputFile": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\debug\\values-hi_values-hi.arsc.flat",
+            "outputFile": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\debug\\values-cs_values-cs.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\18536\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\7f0e7098c8de3b65aaf4d160e98e2af6\\res\\values-hi\\values.xml",
+                    "source": "C:\\Users\\18536\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\7f0e7098c8de3b65aaf4d160e98e2af6\\res\\values-cs\\values.xml",
                     "from": {
                         "startLines": "3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "56,171,279,402,507,614,699,801,923,1032,1134,1232,1342,1442,1557",
-                        "endColumns": "114,107,122,104,106,84,101,121,108,101,97,109,99,114,124",
-                        "endOffsets": "166,274,397,502,609,694,796,918,1027,1129,1227,1337,1437,1552,1677"
+                        "startOffsets": "56,163,272,396,498,607,693,798,915,1019,1128,1227,1333,1443,1550",
+                        "endColumns": "106,108,123,101,108,85,104,116,103,108,98,105,109,106,121",
+                        "endOffsets": "158,267,391,493,602,688,793,910,1014,1123,1222,1328,1438,1545,1667"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,170,278,401,506,613,698,800,922,1031,1133,1231,1341,1441,1556",
-                        "endColumns": "114,107,122,104,106,84,101,121,108,101,97,109,99,114,124",
-                        "endOffsets": "165,273,396,501,608,693,795,917,1026,1128,1226,1336,1436,1551,1676"
+                        "startOffsets": "55,162,271,395,497,606,692,797,914,1018,1127,1226,1332,1442,1549",
+                        "endColumns": "106,108,123,101,108,85,104,116,103,108,98,105,109,106,121",
+                        "endOffsets": "157,266,390,492,601,687,792,909,1013,1122,1221,1327,1437,1544,1666"
                     }
                 }
             ]
@@ -187,23 +187,23 @@
             ]
         },
         {
-            "outputFile": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\debug\\values-cs_values-cs.arsc.flat",
+            "outputFile": "D:\\Android Studio Workspace company\\StreetLamp\\streetLampApp\\build\\intermediates\\res\\merged\\debug\\values-hi_values-hi.arsc.flat",
             "map": [
                 {
-                    "source": "C:\\Users\\18536\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\7f0e7098c8de3b65aaf4d160e98e2af6\\res\\values-cs\\values.xml",
+                    "source": "C:\\Users\\18536\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-21.0.3.aar\\7f0e7098c8de3b65aaf4d160e98e2af6\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "3,4,5,6,7,8,9,10,11,12,13,14,15,16,17",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "56,163,272,396,498,607,693,798,915,1019,1128,1227,1333,1443,1550",
-                        "endColumns": "106,108,123,101,108,85,104,116,103,108,98,105,109,106,121",
-                        "endOffsets": "158,267,391,493,602,688,793,910,1014,1123,1222,1328,1438,1545,1667"
+                        "startOffsets": "56,171,279,402,507,614,699,801,923,1032,1134,1232,1342,1442,1557",
+                        "endColumns": "114,107,122,104,106,84,101,121,108,101,97,109,99,114,124",
+                        "endOffsets": "166,274,397,502,609,694,796,918,1027,1129,1227,1337,1437,1552,1677"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,162,271,395,497,606,692,797,914,1018,1127,1226,1332,1442,1549",
-                        "endColumns": "106,108,123,101,108,85,104,116,103,108,98,105,109,106,121",
-                        "endOffsets": "157,266,390,492,601,687,792,909,1013,1122,1221,1327,1437,1544,1666"
+                        "startOffsets": "55,170,278,401,506,613,698,800,922,1031,1133,1231,1341,1441,1556",
+                        "endColumns": "114,107,122,104,106,84,101,121,108,101,97,109,99,114,124",
+                        "endOffsets": "165,273,396,501,608,693,795,917,1026,1128,1226,1336,1436,1551,1676"
                     }
                 }
             ]

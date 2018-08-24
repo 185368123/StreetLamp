@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Aug 21 18:16:57 CST 2018
+#Fri Aug 24 14:14:45 CST 2018
 4.path=lib/x86/libAMapSDK_MAP_v6_2_0.so
 13.baseType=DIRECTORY
 8.set=NATIVE_RESOURCE

@@ -175,14 +175,12 @@ public class TotalLampControlListActivity extends FragmentActivity implements
 		mIndicator = (PageIndicator) view.findViewById(R.id.indicator_all_lamp_control_list);
 		mViewPager = (ViewPager) view.findViewById(R.id.vp_all_lamp_control_list);
 		mViewFlipper.addView(view);
-	
 	}
 
 	private void initFaultViewFlipper() {
 		View view = View.inflate(this, R.layout.viewflipper_fault_lamp_control, null);
 		mFaultContentLv = (ListView) view.findViewById(R.id.lv_fault_lamp_control_list_content);
 		mFaultContentLv.setOnItemClickListener(new OnItemClickListener() {
-
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {

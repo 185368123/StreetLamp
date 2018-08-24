@@ -1,5 +1,6 @@
 package com.shuorigf.streetlampapp.fragment;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
@@ -17,6 +18,7 @@ import com.amap.api.maps.model.BitmapDescriptor;
 import com.amap.api.maps.model.BitmapDescriptorFactory;
 import com.amap.api.maps.model.CameraPosition;
 import com.amap.api.maps.model.LatLng;
+import com.amap.api.maps.model.LatLngBounds;
 import com.amap.api.maps.model.Marker;
 import com.amap.api.maps.model.MarkerOptions;
 import com.amap.api.maps.model.MyLocationStyle;
@@ -38,12 +40,26 @@ import com.shuorigf.streetlampapp.data.LampControlDetailsData;
 import com.shuorigf.streetlampapp.data.DeviceData.Data.LampData;
 import com.shuorigf.streetlampapp.data.LampControlDetailsData.Data;
 import com.shuorigf.streetlampapp.data.LoginData;
+import com.shuorigf.streetlampapp.mapconverge.Cluster;
+import com.shuorigf.streetlampapp.mapconverge.ClusterClickListener;
+import com.shuorigf.streetlampapp.mapconverge.ClusterItem;
+import com.shuorigf.streetlampapp.mapconverge.ClusterOverlay;
+import com.shuorigf.streetlampapp.mapconverge.ClusterRender;
+import com.shuorigf.streetlampapp.mapconverge.RegionItem;
 import com.shuorigf.streetlampapp.network.NetManager;
 import com.shuorigf.streetlampapp.util.DensityUtils;
 import com.zhy.http.okhttp.OkHttpUtils;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -57,7 +73,7 @@ import android.widget.CompoundButton.OnCheckedChangeListener;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class DeviceFragment extends BaseFragment implements OnClickListener {
+public class DeviceFragment extends BaseFragment implements OnClickListener, ClusterRender, ClusterClickListener {
 
 	private static final String TAG = DeviceFragment.class.getSimpleName();
 	private static final int SELECT_PROJECT_REQUESTCODE = 1;
@@ -98,8 +114,13 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
 	 
 	 private String project_name;
 	 private String lamp_numble;
-	 
-	
+
+
+
+	private ClusterOverlay mClusterOverlay;
+	private int clusterRadius = 40;
+	private Map<Integer, Drawable> mBackDrawAbles = new HashMap<>();
+	private Map<Integer, Drawable> mLampDrawAbles = new HashMap<>();
 	@Override
 	public View initView(Bundle savedInstanceState) {
 		View view = View.inflate(mActivity, R.layout.fragment_device, null);
@@ -180,7 +201,7 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
 		 }else {
 			 mBaiduMap.setMapLanguage(AMap.CHINESE); 
 		 }
-		mBaiduMap.setOnMarkerClickListener(myOnMarkerClickListener);
+		//mBaiduMap.setOnMarkerClickListener(myOnMarkerClickListener);
 		mBaiduMap.setOnInfoWindowClickListener(myOnInfoWindowClickListener);
 		mBaiduMap.setInfoWindowAdapter(new InfoWindowAdapter() {
 			
@@ -285,7 +306,6 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
 		new MyThread().start();
 		
 	}
-	
 	
 
 	@Override
@@ -507,7 +527,7 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
 				mBaiduMap.clear();
 			}
 		});
-     	
+
      	try {
 			Thread.sleep(500);
 		} catch (InterruptedException e) {
@@ -519,9 +539,17 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
 //    		mBaiduTaskRuning = false;
     		return;
     	}
+		List<ClusterItem> items = new ArrayList<ClusterItem>();
+		for (LampData lampData : mLampControls) {
+			LatLng ll = new LatLng(lampData.getLatitude(), lampData.getLongitude());
+			RegionItem regionItem = new RegionItem(ll, ""+lampData.getIsfaulted(),lampData.getStatus()+"",lampData.getId());
+			items.add(regionItem);
+		}
     	Log.e("mLampControls数量",""+mLampControls.size());
-
-    	for (LampData lampData : mLampControls) {
+		mClusterOverlay = new ClusterOverlay(mBaiduMap, items, dp2px(getActivity().getApplicationContext(), clusterRadius), getActivity().getApplicationContext());
+		mClusterOverlay.setClusterRenderer(this);
+		mClusterOverlay.setOnClusterClickListener(this);
+ /*   	for (LampData lampData : mLampControls) {
     		if(id !=  mBaiduTaskId)
     		{
     			Log.e(TAG, "mBaiduTaskId:"+mBaiduTaskId+",id:"+id);
@@ -553,11 +581,25 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
     			}
     		}
 
-    	}
+    	}*/
 //    	mBaiduTaskRuning = false;
     }
-    
-    
+	/**
+	 * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
+	 */
+	public int dp2px(Context context, float dpValue) {
+		final float scale = context.getResources().getDisplayMetrics().density;
+		return (int) (dpValue * scale + 0.5f);
+	}
+	private Bitmap drawCircle(int radius, int color) {
+		Bitmap bitmap = Bitmap.createBitmap(radius * 2, radius * 2, Bitmap.Config.ARGB_8888);
+		Canvas canvas = new Canvas(bitmap);
+		Paint paint = new Paint();
+		RectF rectF = new RectF(0, 0, radius * 2, radius * 2);
+		paint.setColor(color);
+		canvas.drawArc(rectF, 0, 360, true, paint);
+		return bitmap;
+	}
     public void onVisible(){  
     	if (isPrepared&&!isLoaded) {
     		getDeviceData();
@@ -566,9 +608,82 @@ public class DeviceFragment extends BaseFragment implements OnClickListener {
   
     public void onInvisible(){
     	
-    }  	   
-    
-    private class MyThread extends Thread {
+    }
+
+	@Override
+	public Drawable getDrawAble(Cluster cluster) {
+		int radius = dp2px(getActivity().getApplicationContext(), 60);
+		int clusterNum=cluster.getClusterCount();
+		if (clusterNum == 1) {
+			RegionItem regionItem= (RegionItem) cluster.getClusterItems().get(0);
+			if (regionItem.getIsfaulted().equals("1")){
+				Drawable bitmapDrawable = mLampDrawAbles.get(1);
+				if (bitmapDrawable == null) {
+					bitmapDrawable = getActivity().getApplication().getResources().getDrawable(R.drawable.ic_map_lamp_control_err_status);
+					mLampDrawAbles.put(1, bitmapDrawable);
+				}
+				return bitmapDrawable;
+			}else {
+				if (regionItem.getStatus().equals("1")){
+					Drawable bitmapDrawable = mLampDrawAbles.get(2);
+					if (bitmapDrawable == null) {
+						bitmapDrawable = getActivity().getApplication().getResources().getDrawable(R.drawable.ic_map_lamp_control_on_status);
+						mLampDrawAbles.put(2, bitmapDrawable);
+					}
+					return bitmapDrawable;
+				}else {
+					Drawable bitmapDrawable = mLampDrawAbles.get(3);
+					if (bitmapDrawable == null) {
+						bitmapDrawable = getActivity().getApplication().getResources().getDrawable(R.drawable.ic_map_lamp_control_off_status);
+						mLampDrawAbles.put(3, bitmapDrawable);
+					}
+					return bitmapDrawable;
+				}
+			}
+
+		} else if (clusterNum < 5) {
+			Drawable bitmapDrawable = mBackDrawAbles.get(2);
+			if (bitmapDrawable == null) {
+				bitmapDrawable = new BitmapDrawable(null, drawCircle(radius, Color.argb(159, 210, 154, 6)));
+				mBackDrawAbles.put(2, bitmapDrawable);
+			}
+			return bitmapDrawable;
+		} else if (clusterNum < 10) {
+			Drawable bitmapDrawable = mBackDrawAbles.get(3);
+			if (bitmapDrawable == null) {
+				bitmapDrawable = new BitmapDrawable(null, drawCircle(radius, Color.argb(199, 217, 114, 0)));
+				mBackDrawAbles.put(3, bitmapDrawable);
+			}
+			return bitmapDrawable;
+		} else {
+			Drawable bitmapDrawable = mBackDrawAbles.get(4);
+			if (bitmapDrawable == null) {
+				bitmapDrawable = new BitmapDrawable(null, drawCircle(radius, Color.argb(235, 215, 66, 2)));
+				mBackDrawAbles.put(4, bitmapDrawable);
+			}
+			return bitmapDrawable;
+		}
+	}
+
+	@Override
+	public void onClick(Marker marker, List<ClusterItem> clusterItems) {
+		Log.e("marker点击事件",clusterItems.size()+"");
+		if (clusterItems.size()==1){
+			RegionItem regionItem= (RegionItem) clusterItems.get(0);
+			marker.setTitle(regionItem.getLamp_id());
+			OkHttpUtils.getInstance().cancelTag(NetManager.LAMP_CONTROL_DETAILS_URL);
+			getLampControlDetailsData(marker);
+		}else {
+			LatLngBounds.Builder builder = new LatLngBounds.Builder();
+			for (ClusterItem clusterItem : clusterItems) {
+				builder.include(clusterItem.getPosition());
+			}
+			LatLngBounds latLngBounds = builder.build();
+			mBaiduMap.animateCamera(CameraUpdateFactory.newLatLngBounds(latLngBounds, 0));
+		}
+	}
+
+	private class MyThread extends Thread {
 
 		@Override
 		public void run() {
